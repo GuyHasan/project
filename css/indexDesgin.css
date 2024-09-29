@@ -335,9 +335,11 @@ footer div.social img[alt~="thumbnail"] {
     }
 
     header#mobileNav nav {
+        flex-grow: 1;
         width: 100%;
         display: flex;
         flex-direction: column;
+        align-items: end;
         background-color: #F5F5F5;
         border-bottom: 1px solid black;
     }
@@ -353,13 +355,11 @@ footer div.social img[alt~="thumbnail"] {
         text-decoration: none;
         line-height: 2;
         text-align: right;
-        margin-left: auto;
         padding-right: 20px;
     }
 
-    img[alt~="hamburgerIcon"] {
+    img[src="images/svg/hamburger.svg"] {
         height: 40px;
-        margin-left: auto;
         padding-right: 30px;
     }
 
@@ -368,7 +368,7 @@ footer div.social img[alt~="thumbnail"] {
         display: none;
     }
 
-    img[alt="hamburgerIcon"]:hover+ul#MbNav {
+    img[src="images/svg/hamburger.svg"]:hover+ul#MbNav {
         display: flex;
         flex-direction: column;
         text-align: right;
