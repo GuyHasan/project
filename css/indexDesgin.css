@@ -17,6 +17,9 @@
 
 /*--------------------------------------------------------- General stuff----------------------------------------------------------------------- */
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: rubik;
@@ -33,6 +36,10 @@ body {
 
 .normalText {
     font-size: clamp(0.875rem, 0.224vw + 0.732rem, 1rem);
+}
+
+.anchorRef {
+    position: absolute;
 }
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -70,7 +77,7 @@ header#mobileNav nav ul li a {
 img[alt~="hamburgerIcon"] {
     height: 40px;
     margin-left: auto;
-    padding-right: 20px;
+    padding-right: 30px;
 }
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -78,6 +85,7 @@ img[alt~="hamburgerIcon"] {
 
 header#desktopNav {
     position: fixed;
+    z-index: 5;
     right: 60px;
     top: 60px;
 
@@ -114,8 +122,7 @@ ul#DsNav li a {
 }
 
 ul#DsNav li a:hover {
-    color: #229799;
-    border: 1px solid #000;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.741);
     font-weight: bold;
 }
 
@@ -123,12 +130,18 @@ ul#DsNav li a:hover {
 /*--------------------------------------------------------- Main AREA stuff--------------------------------------------------------------------- */
 
 div.mainarea {
+    position: relative;
+    z-index: 0px;
     display: flex;
     flex-direction: column;
     background-color: aqua;
     height: 90vh;
     justify-content: space-evenly;
     background-color: #48CFCB;
+}
+
+div.mainarea .anchorRef {
+    top: 0px;
 }
 
 div.mainarea div.mainareaText {
@@ -139,6 +152,8 @@ div.mainarea div.mainareaText {
 /*--------------------------------------------------------- About Me AREA stuff----------------------------------------------------------------- */
 
 div.aboutme {
+    position: relative;
+    z-index: 0;
     display: flex;
     flex-direction: column;
     background-color: bisque;
@@ -153,6 +168,10 @@ div.aboutme>* {
     margin: 8px 0px;
 }
 
+.aboutme .anchorRef {
+    top: -150px;
+}
+
 img[alt~="profile"] {
     height: 150px;
 }
@@ -161,11 +180,17 @@ img[alt~="profile"] {
 /*--------------------------------------------------------- projects AREA stuff----------------------------------------------------------------- */
 
 div.myprojects {
+    position: relative;
+    z-index: 0;
     display: flex;
     height: 100vh;
     padding: 50px 100px;
     flex-direction: row-reverse;
     background-color: #48CFCB;
+}
+
+.myprojects .anchorRef {
+    top: 0px;
 }
 
 div.myprojects div.projTextArea {
@@ -233,10 +258,14 @@ div.myprojects div.listofprojects div.projectsinfo {
 
 .projbutton {
     background-color: #48CFCB;
-    width: fit-content;
     padding: 5px;
     border-radius: 10px;
     box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .5);
+}
+
+.projbutton:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, .5);
 }
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
