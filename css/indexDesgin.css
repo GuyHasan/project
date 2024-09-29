@@ -77,10 +77,16 @@ img[alt~="hamburgerIcon"] {
 /*--------------------------------------------------------- Desktop Nav stuff------------------------------------------------------------------- */
 
 header#desktopNav {
-    display: flex;
-    position: absolute;
+    position: fixed;
     right: 60px;
     top: 60px;
+
+}
+
+header#desktopNav nav {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
     direction: rtl;
 }
 
@@ -89,22 +95,29 @@ img[src$="menuDots.svg"] {
 }
 
 header#desktopNav nav ul {
+    list-style-type: none;
     display: none;
 }
 
-img[src$="menuDots.svg"]:hover+ul#DsNav {
+header#desktopNav nav:hover ul#DsNav {
     list-style-type: none;
     display: flex;
     flex-direction: column;
+    padding-right: 10px;
+
 }
 
-header#mobileNav nav ul li a {
+ul#DsNav li a {
     color: black;
     text-decoration: none;
-    line-height: 2;
-    text-align: center;
+    line-height: 1.5;
 }
 
+ul#DsNav li a:hover {
+    color: #229799;
+    border: 1px solid #000;
+    font-weight: bold;
+}
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 /*--------------------------------------------------------- Main AREA stuff--------------------------------------------------------------------- */
