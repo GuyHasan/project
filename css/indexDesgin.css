@@ -323,6 +323,7 @@ div.contactArea div.formArea div.formBox input {
 div.contactArea div.formArea div.formBox textarea {
     height: 6rem;
     line-height: 1rem;
+    font-size: 0.9rem;
     display: flex;
     flex-direction: column;
     align-items: left;
