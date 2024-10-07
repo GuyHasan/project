@@ -14,7 +14,8 @@
     <!-------------------------------------------------------- Mobile menu ----------------------------------------------------------------------->
     <header id="mobileNav">
         <nav>
-            <img src="images/svg/hamburger.svg" alt="hamburgerIcon">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" id="hamburger"><img src="images/svg/hamburger.svg" alt="hamburgerIcon"></label>
             <ul id="MbNav">
                 <li><a href="#hero" class="seconderyTitles">ראשי</a></li>
                 <li><a href="#about" class="seconderyTitles">עליי</a></li>
@@ -136,15 +137,21 @@
             </div>
             <div class="formBox">
                 <form>
-                    <label class="normalText" for="full name">שם מלא</label>
-                    <input type="text" id="full name" placeholder="השם שלך, גם פרטי זה בסדר" required>
-                    <label class="normalText" for="phone number">טלפון</label>
-                    <input type="tel" id="phone number" placeholder="050-5555555" required>
+
+                    <label class="normalText" for="fullname">שם מלא</label>
+                    <input type="text" id="fullname" placeholder="השם שלך, גם פרטי זה בסדר" required>
+
+                    <label class="normalText" for="phonenumber">טלפון</label>
+                    <input type="tel" id="phonenumber" placeholder="050-5555555" required>
+
                     <label class="normalText" for="email">אימייל</label required>
                     <input type="email" id="email" placeholder="youremail@gmail.com">
+
                     <label class="normalText" for="messege">הודעה</label>
                     <textarea id="messege" placeholder="אני מתעניין בנוגע ל..."></textarea>
+
                     <input class="normalText" type="submit" value="שליחה">
+
                 </form>
             </div>
         </div>

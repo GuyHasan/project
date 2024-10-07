@@ -247,6 +247,8 @@ div.myprojects div.listofprojects div.projectsinfo {
 /*---------------------------------------------------------- Contact AREA stuff----------------------------------------------------------------- */
 
 div.contactArea {
+    position: relative;
+    z-index: 0;
     height: 70vh;
     padding: 40px 100px;
     display: grid;
@@ -255,6 +257,8 @@ div.contactArea {
     direction: rtl;
 }
 
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
 div.contactArea div.contactAreainfo {
     display: flex;
     flex-direction: column;
@@ -268,6 +272,9 @@ div.contactArea div.contactAreainfo h2 {
     margin-bottom: 20px;
 }
 
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+
 div.contactArea div.formArea {
     display: flex;
     flex-direction: column;
@@ -279,29 +286,59 @@ div.contactArea div.formArea div.seconderyTitles {
 }
 
 div.contactArea div.formArea div.formBox {
-    display: flex;
     flex-grow: 1;
     box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .5);
     border-radius: 10%;
     margin: 20px 80px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 40px;
 }
 
 div.contactArea div.formArea div.formBox form {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 40px;
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: repeat(7, 80px);
+    grid-template-areas:
+        'phonenumber fullname'
+        'input-phonenumber input-fullname'
+        'email email'
+        'input-email input-email'
+        'textarea textarea'
+        'input-textarea input-textarea'
+        'button button';
 }
 
-div.contactArea div.formArea div.formBox label,
-div.contactArea div.formArea div.formBox input,
-div.contactArea div.formArea div.formBox textarea {
-    display: block;
+div.contactArea div.formArea div.formBox label[for="fullname"] {
+    grid-area: "fullname";
 }
 
-div.contactArea div.formArea div.formBox label {}
+div.contactArea div.formArea div.formBox label[for="phonenumber"] {
+    grid-area: "phonenumber";
+}
+
+div.contactArea div.formArea div.formBox label[for="email"] {
+    grid-area: "email";
+}
+
+div.contactArea div.formArea div.formBox label[for="messege"] {
+    grid-area: "textarea";
+}
+
+
+div.contactArea div.formArea div.formBox input[id="fullname"] {
+    grid-area: "input-fullname";
+}
+
+div.contactArea div.formArea div.formBox input[id="phonenumber"] {
+    grid-area: "input-phonenumber";
+}
+
+div.contactArea div.formArea div.formBox input[id="email"] {
+    grid-area: "input-email";
+}
+
+
 
 
 div.contactArea div.formArea div.formBox input,
@@ -309,41 +346,46 @@ div.contactArea div.formArea div.formBox textarea {
     width: 100%;
     margin-bottom: 5px;
     border: none;
-    background-color: #8cccca;
-    border-bottom: #272727 3px solid;
+    border-radius: 50px;
+    background-color: #8cccca4d;
+    box-shadow: 0px 0px 6px 0px rgba(168, 166, 168, 0.75);
     font-family: Rubik;
     direction: rtl;
     padding-right: 6px;
+    margin-bottom: 20px;
 }
 
-div.contactArea div.formArea div.formBox input {
-    height: 2rem;
-}
+
 
 div.contactArea div.formArea div.formBox textarea {
-    height: 6rem;
+    width: 100%;
+    border-radius: 20px;
+    padding: 15px;
     line-height: 1rem;
     font-size: 0.9rem;
-    display: flex;
-    flex-direction: column;
     align-items: left;
     text-wrap: balance;
+    resize: none;
+    grid-area: "input-textarea";
 }
 
-div.contactArea div.formArea div.formBox button {
+div.contactArea div.formArea div.formBox input[type="submit"] {
+    grid-area: "button";
     font-family: Rubik;
     background-color: #48CFCB;
     padding: 10px;
+    width: 50%;
     border: none;
     border-radius: 10px;
     box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .5);
-
 }
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 /*---------------------------------------------------------------- Footer stuff----------------------------------------------------------------- */
 
 footer {
+    position: relative;
+    z-index: 0;
     height: 70px;
     background-color: #48CFCB;
     display: flex;
@@ -427,7 +469,11 @@ footer div.social img[alt~="thumbnail"] {
         display: none;
     }
 
-    img[src="images/svg/hamburger.svg"]:hover+ul#MbNav {
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    input[type="checkbox"]:checked~ul#MbNav {
         display: flex;
         flex-direction: column;
         text-align: right;
@@ -488,7 +534,7 @@ footer div.social img[alt~="thumbnail"] {
     /*------------------------------------------------------------ Contact AREA stuff---------------------------------------------------------------- */
     div.contactArea {
         padding: 30px 10px;
-        height: 60vh;
+        height: max-content;
         display: flex;
         flex-direction: column;
     }
