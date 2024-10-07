@@ -204,7 +204,7 @@ div.myprojects div.listofprojects {
 div.myprojects div.listofprojects div.projectexample {
     display: flex;
     flex-direction: column;
-    height: 300px;
+    height: 400px;
     background-color: #F5F5F5;
     box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .5);
     border-radius: 10%;
