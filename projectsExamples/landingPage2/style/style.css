@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Varela Round;
+}
+
+.container {
+    height: 100vh;
+    background: transparent linear-gradient(180deg, #281EFF 0%, #2DFF8C 100%) 0% 0% no-repeat padding-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    direction: rtl;
+}
+
+.container h1 {
+    font-size: clamp(3.75rem, 7.44vw + 1.071rem, 10rem);
+    font-family: Satisfy;
+    line-height: 231px;
+    text-shadow: 0px 0px 36px #00000087;
+    font-weight: normal;
+    color: #FFFFFF;
+}
+
+.container h2 {
+    font-size: clamp(1.125rem, 1.042vw + 0.75rem, 2rem);
+    line-height: 38px;
+    text-shadow: 0px 0px 36px #00000087;
+    font-weight: normal;
+    color: #FFFFFF;
+}
+
+.container p {
+    font-size: 1rem;
+    color: #F9F9F9;
+    margin: 30px 0px;
+    line-height: 20px;
+}
+
+.container form {
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    align-items: end;
+    justify-content: center;
+}
+
+.container form>* {
+    margin-left: 15px;
+}
+
+.container form .formTable {
+    display: flex;
+    flex-direction: column;
+    width: 22%;
+}
+
+.container form .formTable label {
+    font-size: clamp(0.688rem, 0.372vw + 0.554rem, 1rem);
+    color: #F9F9F9;
+    line-height: 20px;
+}
+
+.container form .formTable input {
+    background: #F6F6F624 0% 0% no-repeat padding-box;
+    border: 2px solid #FFFFFF;
+    height: 50px;
+}
+
+input[type="submit"] {
+    height: 50px;
+    width: 11%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: none;
+    color: #1C1C1C;
+    font-family: Varela Round;
+    font-size: clamp(0.688rem, 0.372vw + 0.554rem, 1rem);
+    line-height: 20px;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*--------------------------------------------------------- media query stuff ------------------------------------------------------------------ */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+@media (max-width:576px) {
+    .container {
+        padding: 0px 5%;
+    }
+
+    .container h1 {
+        line-height: 80px;
+    }
+
+    .container h2 {
+        line-height: 22px;
+    }
+
+    .container p {
+        font-size: 1rem;
+        color: #F9F9F9;
+        margin: 30px 0px;
+        text-align: center;
+        padding: 0px 5px;
+    }
+
+    .container form {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 8px;
+    }
+
+    .container form>* {
+        margin-left: 0px;
+        margin-bottom: 10px;
+    }
+
+    .container form .formTable {
+        width: 90%;
+    }
+
+    .container form .formTable input {
+        height: 36px;
+    }
+
+    input[type="submit"] {
+        height: 36px;
+        width: 90%;
+        line-height: 20px;
+    }
+
+
+}
