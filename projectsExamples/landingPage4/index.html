@@ -5,10 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
+    <div class="contentArea">
+        <img src="images/background@2x.png" alt="תמונת רקע" class="bgImg">
+        <h1>תן לנו להוביל אותך קדימה</h1>
+        <p>לורם איפסום או בקיצור ליפסום, הוא מלל מקובל וחסר משמעות המשמש “ממלא מקום” בעת עריכ.</p>
+    </div>
+    <img src="images/mobileBackground@2x.png" alt="תמונה רקע מובייל" class="bgMobileImg">
+    <div class="formArea">
+        <form>
+            <div class="formTable">
+                <label for="fullname">שם מלא</label>
+                <input type="text" id="fullname" required>
+            </div>
+            <div class="formTable">
+                <label for="mail">דוא״ל</label>
+                <input type="email" id="mail" required>
+            </div>
+            <input type="submit" value="שליחה">
+        </form>
+    </div>
 </body>
 
 </html>
