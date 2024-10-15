@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrap {
+    background-color: #E5EEFF;
+    display: grid;
+    padding: 10% 18% 10% 18%;
+    grid-template-areas:
+        "woodInWater twoWoman content content"
+        "beach cow content content"
+        "wood3 threePeople beachSunset wood"
+        "form form monkey homeless"
+        "form form wood2 train"
+        "form form goldenBall boat"
+    ;
+    grid-template-rows: repeat(6, 25vh);
+    grid-template-columns: repeat(4, 15.4vw);
+    gap: 20px;
+}
+
+.contentBox {
+    background-color: #020253;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: content;
+}
+
+.formBox {
+    background-color: #8E097C;
+    grid-area: form;
+}
+
+.imgBox {
+    overflow: hidden;
+}
+
+img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+}
+
+
+img[src="images/beach"] {
+    grid-area: beach;
+}
+
+img[src="images/beachSunset"] {
+    grid-area: beachSunset;
+}
+
+img[src="images/boat"] {
+    grid-area: boat;
+}
+
+img[src="images/cow"] {
+    grid-area: cow;
+}
+
+img[src="images/goldenBall"] {
+    grid-area: goldenBall;
+}
+
+img[src="images/homeless"] {
+    grid-area: homeless;
+}
+
+img[src="images/monkey"] {
+    grid-area: monkey;
+}
+
+img[src="images/threePeople"] {
+    grid-area: threePeople;
+}
+
+img[src="images/train"] {
+    grid-area: train;
+}
+
+img[src="images/twoWoman"] {
+    grid-area: twoWoman;
+}
+
+img[src="images/wood"] {
+    grid-area: wood;
+}
+
+img[src="images/wood2"] {
+    grid-area: wood2;
+}
+
+img[src="images/wood3"] {
+    grid-area: wood3;
+}
+
+img[src="images/woodInWater"] {
+    grid-area: woodInWater;
+}
