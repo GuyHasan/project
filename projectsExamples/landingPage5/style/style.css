@@ -1,11 +1,23 @@
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*--------------------------------------------------------- Genreral stuff------------------------------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.wrap {
+body {
     background-color: #E5EEFF;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*----------------------------------------------------------- Structure stuff------------------------------------------------------------------- */
+
+.mobileHead {
+    display: none;
+}
+
+.wrap {
     display: grid;
     padding: 10% 18% 10% 18%;
     grid-template-areas:
@@ -21,6 +33,9 @@
     gap: 20px;
 }
 
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*-------------------------------------------------------- Head contect stuff------------------------------------------------------------------- */
+
 .contentBox {
     background-color: #020253;
     display: flex;
@@ -28,12 +43,102 @@
     justify-content: center;
     align-items: center;
     grid-area: content;
+    direction: rtl;
 }
+
+.contentBox h2 {
+    text-align: center;
+    font-family: Assistant;
+    font-weight: bold;
+    line-height: 80px;
+    font-size: clamp(2.25rem, 1.86vw + 1.58rem, 3.813rem);
+    color: #0EE1DA;
+}
+
+.contentBox p {
+    text-align: center;
+    font-family: Assistant;
+    line-height: 26px;
+    font-size: 1.25rem;
+    color: #F9F9F9;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*------------------------------------------------------------ FormArea stuff------------------------------------------------------------------- */
 
 .formBox {
     background-color: #8E097C;
     grid-area: form;
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
+.formBox h2 {
+    font-size: clamp(1.563rem, 0.744vw + 1.295rem, 2.188rem);
+    font-family: Assistant;
+    font-weight: bold;
+    line-height: 46px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.formBox p {
+    font-size: clamp(0.938rem, 0.372vw + 0.804rem, 1.25rem);
+    line-height: 26px;
+    font-family: Assistant;
+    color: #F9F9F9;
+    text-align: center;
+    width: 80%;
+    margin-bottom: 35px;
+}
+
+.formBox form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px 60px;
+}
+
+.formBox form label {
+    font-size: clamp(0.438rem, 0.67vw + 0.196rem, 1rem);
+    color: #0EE1DA;
+    font-family: Heebo;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.formBox form input.infoInput {
+    height: 60px;
+    width: 100%;
+    background-color: #E5EEFF;
+    border: none;
+    border-bottom: 5px solid #0EE1DA;
+    margin-bottom: 20px;
+}
+
+.formBox form textarea {
+    margin-bottom: 15px;
+    height: 170px;
+    border-bottom: 5px solid #0EE1DA;
+    background-color: #E5EEFF;
+    resize: none;
+}
+
+.formBox form input[type="submit"] {
+    border: none;
+    height: 60px;
+    background-color: #0EE1DA;
+    font-family: Heebo;
+    font-weight: bold;
+    font-size: clamp(0.75rem, 0.893vw + 0.429rem, 1.5rem);
+    color: #011560;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*--------------------------------------------------------- Images size stuff------------------------------------------------------------------- */
 
 .imgBox {
     overflow: hidden;
@@ -45,59 +150,149 @@ img {
     height: auto;
 }
 
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*------------------------------------------------------ GridArea Names stuff------------------------------------------------------------------- */
 
-img[src="images/beach"] {
+.beach {
     grid-area: beach;
 }
 
-img[src="images/beachSunset"] {
+.beachSunset {
     grid-area: beachSunset;
 }
 
-img[src="images/boat"] {
+.boat {
     grid-area: boat;
 }
 
-img[src="images/cow"] {
+.cow {
     grid-area: cow;
 }
 
-img[src="images/goldenBall"] {
+.goldenBall {
     grid-area: goldenBall;
 }
 
-img[src="images/homeless"] {
+.homeless {
     grid-area: homeless;
 }
 
-img[src="images/monkey"] {
+.monkey {
     grid-area: monkey;
 }
 
-img[src="images/threePeople"] {
+.threePeople {
     grid-area: threePeople;
 }
 
-img[src="images/train"] {
+.train {
     grid-area: train;
 }
 
-img[src="images/twoWoman"] {
+.twoWoman {
     grid-area: twoWoman;
 }
 
-img[src="images/wood"] {
+.wood {
     grid-area: wood;
 }
 
-img[src="images/wood2"] {
+.wood2 {
     grid-area: wood2;
 }
 
-img[src="images/wood3"] {
+.wood3 {
     grid-area: wood3;
 }
 
-img[src="images/woodInWater"] {
+.woodInWater {
     grid-area: woodInWater;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*--------------------------------------------------------- media query stuff------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+@media (max-width:576px) {
+
+
+    /*---------------------------------------------------------------------------------------------------------------------------------------------- */
+    /*----------------------------------------------------------- Structure stuff------------------------------------------------------------------- */
+    .wrap {
+        padding: 0 20px;
+        grid-template-areas:
+            "woodInWater twoWoman"
+            "beach cow"
+            "beachSunset wood"
+            "wood3 threePeople"
+            "form form"
+            "form form"
+            "form form"
+            "monkey homeless"
+            "wood2 train"
+            "goldenBall boat"
+        ;
+        grid-template-rows: repeat(10, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 5px;
+        column-gap: 10px;
+    }
+
+    .contentBox {
+        display: none;
+    }
+
+    .mobileHead {
+        display: flex;
+        height: 45vh;
+        margin-bottom: 20px;
+        background-color: #020253;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-area: content;
+        direction: rtl;
+    }
+
+    .mobileHead h2 {
+        text-align: center;
+        font-family: Assistant;
+        font-weight: bold;
+        line-height: 47px;
+        font-size: clamp(2.25rem, 1.86vw + 1.58rem, 3.813rem);
+        color: #0EE1DA;
+    }
+
+    .mobileHead p {
+        width: 80%;
+        text-align: center;
+        font-family: Assistant;
+        line-height: 26px;
+        font-size: 1.25rem;
+        color: #F9F9F9;
+    }
+
+    /*---------------------------------------------------------------------------------------------------------------------------------------------- */
+    /*------------------------------------------------------------ FormArea stuff------------------------------------------------------------------- */
+    .formBox form {
+        padding: 0px 30px;
+    }
+
+    .formBox form input.infoInput {
+        height: 33px;
+        margin-bottom: 15px;
+    }
+
+    .formBox form textarea {
+        margin-bottom: 15px;
+        height: 95px;
+    }
+
+    .formBox form input[type="submit"] {
+        height: 33px;
+    }
+
 }

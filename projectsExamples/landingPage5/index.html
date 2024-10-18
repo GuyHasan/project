@@ -6,40 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <div class="mobileHead">
+        <h2>לגלות את העולם</h2>
+        <p>לורם איפסום או בקיצור ליפסום, הוא מלל מקובל וחסר משמעות המשמש “ממלא מקום” בעת עריכ.</p>
+    </div>
     <div class="wrap">
         <div class="contentBox">
             <h2>לגלות את העולם</h2>
             <p>לורם איפסום או בקיצור ליפסום, הוא מלל מקובל וחסר משמעות המשמש “ממלא מקום” בעת עריכ.</p>
         </div>
-        <div class="imgBox"><img src="images/beach.png" alt=""></div>
-        <div class="imgBox"><img src="images/beachSunset.png" alt=""></div>
-        <div class="imgBox"><img src="images/boat.png" alt=""></div>
-        <div class="imgBox"><img src="images/cow.png" alt=""></div>
-        <div class="imgBox"><img src="images/goldenBall.png" alt=""></div>
-        <div class="imgBox"><img src="images/homeless.png" alt=""></div>
-        <div class="imgBox"><img src="images/moneky.png" alt=""></div>
-        <div class="imgBox"><img src="images/threePeople.png" alt=""></div>
-        <div class="imgBox"><img src="images/train.png" alt=""></div>
-        <div class="imgBox"><img src="images/twoWoman.png" alt=""></div>
-        <div class="imgBox"><img src="images/wood.png" alt=""></div>
-        <div class="imgBox"><img src="images/wood2.png" alt=""></div>
-        <div class="imgBox"><img src="images/wood3.png" alt=""></div>
-        <div class="imgBox"><img src="images/woodInWater.png" alt=""></div>
+        <div class="imgBox beach"><img src="images/beach.png" alt=""></div>
+        <div class="imgBox beachSunset"><img src="images/beachSunset.png" alt=""></div>
+        <div class="imgBox boat"><img src="images/boat.png" alt=""></div>
+        <div class="imgBox cow"><img src="images/cow.png" alt=""></div>
+        <div class="imgBox goldenBall"><img src="images/goldenBall.png" alt=""></div>
+        <div class="imgBox homeless"><img src="images/homeless.png" alt=""></div>
+        <div class="imgBox moneky"><img src="images/moneky.png" alt=""></div>
+        <div class="imgBox threePeople"><img src="images/threePeople.png" alt=""></div>
+        <div class="imgBox train"><img src="images/train.png" alt=""></div>
+        <div class="imgBox twoWoman"><img src="images/twoWoman.png" alt=""></div>
+        <div class="imgBox wood"><img src="images/wood.png" alt=""></div>
+        <div class="imgBox wood2"><img src="images/wood2.png" alt=""></div>
+        <div class="imgBox wood3"><img src="images/wood3.png" alt=""></div>
+        <div class="imgBox woodInWater"><img src="images/woodInWater.png" alt=""></div>
         <div></div>
         <div class="formBox">
             <h2>ספרו לנו על החוויה שלכם</h2>
             <p>לורם איפסום או בקיצור ליפסום, הוא מלל מקובל וחסר משמעות המשמש “ממלא מקום” בעת עריכ.</p>
             <form action="">
-                <label for="">שם מלא</label>
-                <input type="text">
-                <label for="">דוא״ל</label>
-                <input type="text">
-                <label for="">החוויה שלכם</label>
-                <textarea name="" id=""></textarea>
-                <input type="submit" value="">
+                <label for="fullname">שם מלא</label>
+                <input type="text" id="fullname" class="infoInput" required>
+                <label for="mail">דוא״ל</label>
+                <input type="text" id="mail" class="infoInput" required>
+                <label for="extraText">החוויה שלכם</label>
+                <textarea name="fillYourWill" id="extraText"></textarea>
+                <input type="submit" value="שליחה">
             </form>
         </div>
     </div>
