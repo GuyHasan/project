@@ -220,4 +220,123 @@ img[src^="../../images/svg/"] {
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 
 
-@media (max-width:576px) {}
+@media (max-width:576px) {
+
+/*------------------------------------------------------------ Structure stuff ----------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+    .container{
+        display: flex;
+        width: 100%;
+        height: fit-content;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 10px solid #FDBD03;
+    }
+
+    .container>* {
+        margin-bottom: 0px;
+    }
+
+    .hLine{
+        position: static;
+        width: 86vw;
+        height: 10px;
+        align-self:flex-end;
+        }
+    
+    .bLine{
+            display: none;
+        }
+
+/*---------------------------------------------------------------- Image stuff ----------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+    .imgBox img {
+        height: 12vh;
+        width: auto;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+
+/*----------------------------------------------------------------- Form stuff ----------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+    .formBox {
+        padding: 0px 25px;
+        text-align: center;
+    }
+    .formBox h1 {
+        line-height: 59px;
+        margin-bottom: 9px;
+    }
+    
+    .formBox p {
+        width: 100%;
+        padding: 0 10%;
+        margin-bottom: 30px;
+    }
+    
+    .formBox form label {
+        line-height: 14px;
+    }
+    
+    .formBox form input {
+        height: 37px;
+        margin-bottom: 10px;
+    }
+    
+    .formBox form textarea {
+        height: 106px;
+        margin-bottom: 5px;
+    }
+    
+    .formBox form input[type="submit"] {
+        width: 100%;
+        line-height: 21px;
+        margin-bottom: 16vh;
+    }
+
+/*--------------------------------------------------------- Form Structure---------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+.formBox form {
+    grid-template-areas:
+        "fullNameLabel ."
+        "fullNameInput fullNameInput"
+        "emailLabel ."
+        "emailInput emailInput"
+        "extraTextLabel ."
+        "extraTextInput extraTextInput"
+        "formButton formButton"
+    ;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(7, auto);
+    row-gap: 5px;
+    column-gap: 10px;
+    text-align: right;
+}
+
+/*--------------------------------------------------------- Contact Icon stuff ----------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+    .svgCircle{
+    width: 45px;
+    height: 45px;
+    padding: 12px;
+}
+
+    .topIcon{
+        display: none;
+    }
+
+    .bottomIcons{
+        width: 80%;
+        position: static;
+        margin-bottom: 25px;
+        justify-content: space-evenly;
+    }
+
+    .bottomIcons>* {
+        margin-right: 0px;
+    }
+}
