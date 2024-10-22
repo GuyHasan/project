@@ -20,11 +20,11 @@ body{
     width: 95px;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 50%;
-    padding: 25px;
+    padding: 30px;
     background-color: #0EE1E1;
 }
 
-img[src^="../../images/svg/"] {
+.svgCircle img[src^="../../images/svg/"] {
     width: 100%;
     height: auto;
 }
@@ -115,10 +115,82 @@ img[src^="../../images/svg/"] {
     line-height: 22px;
 }
 
-/*--------------------------------------------------------- FormBox stuff ---------------------------------------------------------------------- */
+/*--------------------------------------------------------- mainArea stuff --------------------------------------------------------------------- */
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
+.mainArea{
+    display: grid;
+    grid-template-areas:
+    "formBox mapBox"
+    ;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 80vh;
+}
+.mapBox{
+    grid-area: mapBox;
+    background-color: #0EE1E1;
+    padding: 70px;
+}
 
+.mapBox iframe{
+    height: 100%;
+    width: 100%;
+}
 
+.formBox{
+    grid-area: formBox;
+    background-color: #F0FFFF;
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+    padding: 0 20%;
+}
+
+.formBox h2{
+    margin-top: 10vh;
+    color: #090909;
+    font-size: clamp(2rem, 1.566vw + 0.996rem, 2.875rem);
+    font-weight: 900;
+    line-height: 67px;
+}
+
+.formBox p{
+    font-size: 0.938rem;
+    line-height: 22px;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.formBox form label{
+    color: #2C2C2C;
+    font-size: clamp(0.75rem, 0.112vw + 0.678rem, 0.813rem);
+    font-weight: bold;
+    line-height: 19px;
+}
+
+.formBox form input{
+    background-color: #E5EEFF;
+    border: none;
+    border-bottom: 4px solid #0EE1E1;
+    height: 51px;
+}
+
+.formBox form textArea{
+    background-color: #E5EEFF;
+    border: none;
+    border-bottom: 4px solid #0EE1E1;
+    height: 145px;
+    resize: none;
+    margin-bottom: 20px;
+}
+
+.formBox form input[type="submit"]{
+    background-color: #0EE1E1;
+    border-bottom: none;
+    font-family: Heebo;
+    font-size: clamp(0.813rem, 0.783vw + 0.31rem, 1.25rem);
+    font-weight: bold;
+    line-height: 29px;
+}
 
 /*--------------------------------------------------------- Form Structure---------------------------------------------------------------------- */
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -172,7 +244,16 @@ img[src^="../../images/svg/"] {
 
 /*--------------------------------------------------------- Contact Icon stuff ----------------------------------------------------------------- */
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
-
+.socialIcons{
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 18px solid #0EE1E1;
+}
+.socialIcons>*{
+    margin-right: 35px;
+}
 
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -186,27 +267,113 @@ img[src^="../../images/svg/"] {
 
 @media (max-width:576px) {
 
-/*------------------------------------------------------------ Structure stuff ----------------------------------------------------------------- */
+/*----------------------------------------------------------------- hero stuff ----------------------------------------------------------------- */
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 
 
+.hero{
+    height: fit-content;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 10vw;
+}
 
-/*---------------------------------------------------------------- Image stuff ----------------------------------------------------------------- */
+.hero .svgCircle{
+    display: none;
+}
+
+.imgBox{
+    padding: 5vh 0;
+}
+.imgBox img{
+    height: 65px;
+    width: auto;
+}
+
+.textArea{
+    direction: rtl;
+    padding-right: 0;
+    padding-bottom: 5vh;
+}
+
+.textArea h1{
+    line-height: 49px;
+}
+
+.textArea p{
+    line-height: 22px;
+    width: 70%;
+}
+
+
+/*---------------------------------------------------------------- SquareList stuff ------------------------------------------------------------ */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.squareList{
+    height: fit-content;
+    padding: 5vh 5vw;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(auto,1fr);
+    row-gap: 20px;
+}
+
+
+/*------------------------------------------------------------- mainArea stuff ----------------------------------------------------------------- */
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 
 
+.mainArea{
+    display: flex;
+    flex-direction: column-reverse;
+}
 
-/*----------------------------------------------------------------- Form stuff ----------------------------------------------------------------- */
-/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+.mapBox{
+    height: 40vh;
+    padding: 25px 45px;
+}
 
+.formBox{
+    padding: 40px 10%;
+}
 
+.formBox h2{
+    margin-top: 20px;
+    line-height: 47px;
+}
 
-/*--------------------------------------------------------- Form Structure---------------------------------------------------------------------- */
-/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+.formBox form label{
+    line-height: 18px;
+}
 
+.formBox form input{
+    height: 37px;
+}
+
+.formBox form textArea{
+    height: 105px;
+    margin-bottom: 10px;
+}
+
+.formBox form input[type="submit"]{
+    line-height: 19px;
+}
 
 
 /*--------------------------------------------------------- Contact Icon stuff ----------------------------------------------------------------- */
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 
+.svgCircle{
+    height: 45px;
+    width: 45px;
+    padding: 12px;
+}
+
+.socialIcons{
+    height: 15vh;
+}
+
+.socialIcons>*{
+    margin-right: 15px;
+}
 }
