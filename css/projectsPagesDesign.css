@@ -66,7 +66,7 @@ header img {
 /*--------------------------------------------------------- mainArea stuff --------------------------------------------------------------------- */
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 
-div.mainArea {
+.mainArea {
     z-index: 0;
     position: relative;
     height: 35vh;
@@ -78,14 +78,14 @@ div.mainArea {
     direction: rtl;
 }
 
-div.mainArea>* {
+.mainArea>* {
     margin-bottom: 20px;
 }
 
-div.mainArea div.buttons {
+.mainArea .buttons {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 15px;
+    column-gap: 25px;
 }
 
 .clickbutton {
@@ -95,12 +95,23 @@ div.mainArea div.buttons {
     background-color: #229799;
     border-radius: 3%;
     box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3);
+    transition: all ease-in-out 1s;
+}
+.clickbutton:hover{
+    transform: scale(1.1);
+}
+
+.clickbutton a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #1a006e;
 }
 
 /*------------------------------------------------------ Programs Showcase stuff --------------------------------------------------------------- */
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 
-div.programsShowcase {
+.programsShowcase {
     z-index: 1;
     position: relative;
     height: 10vh;
@@ -111,14 +122,14 @@ div.programsShowcase {
     justify-content: center;
 }
 
-div.programsShowcase img[alt^="images/techIcons"] {
+.programsShowcase img[alt^="images/techIcons"] {
     height: fit-content;
 }
 
 /*------------------------------------------------------ Project Showcase stuff ---------------------------------------------------------------- */
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 
-div.projectexample {
+.projectexample {
     z-index: 0;
     position: relative;
     display: flex;
@@ -129,7 +140,7 @@ div.projectexample {
     justify-content: center;
 }
 
-div.projectexample img {
+.projectexample img {
     height: 100%;
     box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
 }
@@ -159,4 +170,31 @@ footer {
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 
 
-@media (max-width:576px) {}
+@media (max-width:576px) {
+
+header{
+    padding: 0;
+}
+
+.mainArea{
+    height: fit-content;
+}
+
+.mainArea h1{
+    text-align: center;
+}
+
+.mainArea p{
+    text-align: center;
+}
+
+.projectexample{
+    padding: 20px 40px;
+    height: fit-content;
+}
+.projectexample img{
+    width: 100%;
+    height: auto;
+}
+
+}
