@@ -99,7 +99,7 @@ ul#DsNav li a:hover {
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 /*--------------------------------------------------------- Main AREA stuff--------------------------------------------------------------------- */
 
-div.mainarea {
+.mainarea {
     position: relative;
     z-index: 0px;
     display: flex;
@@ -110,18 +110,18 @@ div.mainarea {
     background-color: #48CFCB;
 }
 
-div.mainarea .anchorRef {
+.mainarea .anchorRef {
     top: 0px;
 }
 
-div.mainarea div.mainareaText {
+.mainarea .mainareaText {
     margin-left: 150px;
 }
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 /*--------------------------------------------------------- About Me AREA stuff----------------------------------------------------------------- */
 
-div.aboutme {
+.aboutme {
     position: relative;
     z-index: 0;
     display: flex;
@@ -134,7 +134,7 @@ div.aboutme {
     direction: rtl;
 }
 
-div.aboutme>* {
+.aboutme>* {
     margin: 8px 0px;
 }
 
@@ -149,7 +149,7 @@ img[alt~="profile"] {
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 /*--------------------------------------------------------- projects AREA stuff----------------------------------------------------------------- */
 
-div.myprojects {
+.myprojects {
     position: relative;
     z-index: 0;
     display: flex;
@@ -163,33 +163,28 @@ div.myprojects {
     top: 0px;
 }
 
-div.myprojects div.projTextArea {
+.myprojects .projTextArea {
     display: flex;
     flex-basis: 0;
     flex-grow: 3;
     direction: rtl;
-    align-items: center;
-}
-
-div.myprojects div.projTextArea div {
-    display: flex;
     flex-direction: column;
-    margin-right: 50px;
-
+    justify-content: center;
+    padding-right: 50px;
 }
 
-div.myprojects div.projTextArea div h2 {
+.myprojects .projTextArea h2 {
     line-height: 1;
 }
 
-div.myprojects div.projTextArea div p {
+.myprojects .projTextArea p {
     padding: 10px;
     width: 70%;
     line-height: 1.5;
 }
 
 
-div.myprojects div.listofprojects {
+.myprojects .listofprojects {
     display: grid;
     padding: 0px 50px;
     flex-basis: 0;
@@ -203,7 +198,7 @@ div.myprojects div.listofprojects {
     grid-column: 2/3;
 }
 
-div.myprojects div.listofprojects div.projectexample {
+.myprojects .listofprojects .projectexample {
     display: flex;
     flex-direction: column;
     height: 37vh;
@@ -219,7 +214,7 @@ img[src^="projectsImg/"] {
     width: 100%;
 }
 
-div.myprojects div.listofprojects div.projectsinfo {
+.myprojects .listofprojects .projectsinfo {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -248,7 +243,7 @@ div.myprojects div.listofprojects div.projectsinfo {
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 /*---------------------------------------------------------- Contact AREA stuff----------------------------------------------------------------- */
 
-div.contactArea {
+.contactArea {
     position: relative;
     z-index: 0;
     height: 70vh;
@@ -260,7 +255,7 @@ div.contactArea {
 }
 
 
-div.contactArea div.contactAreainfo {
+.contactArea .contactAreainfo {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -269,23 +264,23 @@ div.contactArea div.contactAreainfo {
     padding-bottom: 100px;
 }
 
-div.contactArea div.contactAreainfo h2 {
+.contactArea .contactAreainfo h2 {
     margin-bottom: 20px;
 }
 
 
-div.contactArea div.formArea {
+.contactArea .formArea {
     display: flex;
     flex-direction: column;
 }
 
-div.contactArea div.formArea div.seconderyTitles {
+.contactArea .formArea .seconderyTitles {
     margin-top: 10px;
     text-align: center;
 }
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 /*--------------------------------------------------------- FormStructure stuff----------------------------------------------------------------- */
-div.contactArea div.formArea div.formBox {
+.contactArea .formArea .formBox {
     flex-grow: 1;
     box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .5);
     border-radius: 10%;
@@ -295,7 +290,7 @@ div.contactArea div.formArea div.formBox {
     padding: 20px;
 }
 
-div.contactArea div.formArea div.formBox form {
+.contactArea .formArea .formBox form {
     display: grid;
     grid-template-areas:
         'phonenumberLabel fullnameLabel'
@@ -351,9 +346,8 @@ div.contactArea div.formArea div.formBox form {
 
 
 
-div.contactArea div.formArea div.formBox input,
-div.contactArea div.formArea div.formBox textarea {
-    width: 100%;
+.contactArea .formArea .formBox input,
+.contactArea .formArea .formBox textarea {
     margin-bottom: 5px;
     border: none;
     border-radius: 50px;
@@ -368,8 +362,7 @@ div.contactArea div.formArea div.formBox textarea {
 
 
 
-div.contactArea div.formArea div.formBox textarea {
-    width: 100%;
+.contactArea .formArea .formBox textarea {
     border-radius: 20px;
     padding: 15px;
     line-height: 1rem;
@@ -381,11 +374,10 @@ div.contactArea div.formArea div.formBox textarea {
     
 }
 
-div.contactArea div.formArea div.formBox input[type="submit"] {
+.contactArea .formArea .formBox input[type="submit"] {
     font-family: Rubik;
     background-color: #48CFCB;
     padding: 10px;
-    width: 100%;
     height: 2rem;
     border: none;
     border-radius: 10px;
@@ -413,7 +405,7 @@ footer h3 {
     text-align: end;
 }
 
-footer div.social {
+footer .social {
     display: flex;
     justify-content: space-evenly;
     flex-basis: 0;
@@ -421,7 +413,7 @@ footer div.social {
     padding: 7.5px 0px;
 }
 
-footer div.social img[alt~="thumbnail"] {
+footer .social img[alt~="thumbnail"] {
     height: 35px;
 }
 
@@ -495,41 +487,41 @@ footer div.social img[alt~="thumbnail"] {
     /*---------------------------------------------------------------------------------------------------------------------------------------------- */
     /*--------------------------------------------------------- Main AREA stuff--------------------------------------------------------------------- */
 
-    div.mainarea {
+    .mainarea {
         display: flex;
         flex-direction: column;
         height: 70vh;
         justify-content: space-evenly;
     }
 
-    div.mainarea div.mainareaText {
+    .mainarea .mainareaText {
         margin-left: auto;
         padding-left: 20px;
     }
 
     /*----------------------------------------------------------------------------------------------------------------------------------------------- */
     /*---------------------------------------------------------- projects AREA stuff---------------------------------------------------------------- */
-    div.myprojects {
+    .myprojects {
         display: flex;
         height: fit-content;
         padding: 50px 0px;
         flex-direction: column;
     }
 
-    div.myprojects div.projTextArea {
+    .myprojects .projTextArea {
         display: flex;
         flex-basis: 0;
         direction: rtl;
         align-items: center;
     }
 
-    div.myprojects div.projTextArea div {
+    .myprojects .projTextArea div {
         display: flex;
         flex-direction: column;
         margin-right: 50px;
     }
 
-    div.myprojects div.listofprojects {
+    .myprojects .listofprojects {
         display: grid;
         flex-basis: 100vw;
         padding: 50px 70px;
@@ -537,7 +529,7 @@ footer div.social img[alt~="thumbnail"] {
         row-gap: 30px;
     }
 
-    div.myprojects div.listofprojects div.projectexample {
+    .myprojects .listofprojects .projectexample {
         height: 270px;
         text-align: center;
     }
@@ -547,14 +539,14 @@ footer div.social img[alt~="thumbnail"] {
 
     /*----------------------------------------------------------------------------------------------------------------------------------------------- */
     /*------------------------------------------------------------ Contact AREA stuff---------------------------------------------------------------- */
-    div.contactArea {
+    .contactArea {
         padding: 30px 10px;
         height: max-content;
         display: flex;
         flex-direction: column;
     }
 
-    div.contactArea div.contactAreainfo {
+    .contactArea .contactAreainfo {
         display: flex;
         padding: 0;
         align-items: center;
@@ -562,26 +554,26 @@ footer div.social img[alt~="thumbnail"] {
         justify-content: center;
     }
 
-    div.contactArea div.contactAreainfo h2 {
+    .contactArea .contactAreainfo h2 {
         margin-bottom: 20px;
     }
 
-    div.contactArea div.contactAreainfo p {
+    .contactArea .contactAreainfo p {
         text-align: center;
     }
 
-    div.contactArea div.formArea {
+    .contactArea .formArea {
         display: flex;
         flex-direction: column;
         flex-grow: 1;
     }
 
-    div.contactArea div.formArea div.seconderyTitles {
+    .contactArea .formArea .seconderyTitles {
         margin-top: 10px;
         text-align: center;
     }
 
-    div.contactArea div.formArea div.formBox {
+    .contactArea .formArea .formBox {
         display: flex;
         margin: 20px 30px;
 
