@@ -42,6 +42,27 @@ body {
     position: absolute;
 }
 
+.firstBackground{
+        --s: 100px; /* control the size*/
+        --c1: #48CFCB;
+        --c2: #48cfcbde;
+        --c:var(--c2) 20% 30%;
+        background:
+        linear-gradient(135deg,#0000 20%,var(--c),#0000 0),
+        repeating-linear-gradient(45deg,var(--c),var(--c1) 0 70%);
+        background-size: var(--s) var(--s);
+}
+
+.seconderyBackground{
+        --s: 11px; /* control the size*/
+        --c1: #ffffff;
+        --c2: #fcfcfc;
+        --c:var(--c2) 20% 30%;
+        background:
+        linear-gradient(135deg,#0000 20%,var(--c),#0000 0),
+        repeating-linear-gradient(45deg,var(--c),var(--c1) 0 70%);
+        background-size: var(--s) var(--s);
+}
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 /*------------------------------------------------------- Mobile Nav stuff---------------------------------------------------------------------- */
 
@@ -69,7 +90,7 @@ header#desktopNav nav {
 }
 
 img[src$="menuDots.svg"] {
-    height: 40px;
+    height: 60px;
 }
 
 header#desktopNav nav ul {
@@ -101,13 +122,13 @@ ul#DsNav li a:hover {
 
 .mainarea {
     position: relative;
-    z-index: 0px;
+    z-index: 0;
     display: flex;
     flex-direction: column;
     background-color: aqua;
     height: 90vh;
     justify-content: space-evenly;
-    background-color: #48CFCB;
+    
 }
 
 .mainarea .anchorRef {
@@ -118,20 +139,20 @@ ul#DsNav li a:hover {
     margin-left: 150px;
 }
 
+
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 /*--------------------------------------------------------- About Me AREA stuff----------------------------------------------------------------- */
 
 .aboutme {
     position: relative;
-    z-index: 0;
+    z-index: 1;
     display: flex;
     flex-direction: column;
-    background-color: bisque;
     height: 60vh;
     justify-content: center;
     text-align: center;
-    background-color: #F5F5F5;
     direction: rtl;
+    box-shadow:  rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 .aboutme>* {
@@ -143,7 +164,16 @@ ul#DsNav li a:hover {
 }
 
 img[alt~="profile"] {
-    height: 150px;
+    height: 190px;
+}
+
+.resumeBtn{
+    width: fit-content;
+    align-self: center;
+    background-color: #48CFCB;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
 }
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -156,7 +186,6 @@ img[alt~="profile"] {
     height: fit-content;
     padding: 50px 100px;
     flex-direction: row-reverse;
-    background-color: #48CFCB;
 }
 
 .myprojects .anchorRef {
@@ -208,10 +237,16 @@ img[alt~="profile"] {
     overflow: hidden;
     text-align: center;
     direction: rtl;
+    transition: all ease-in-out 1s;
+}
+
+.myprojects .listofprojects .projectexample:hover{
+    transform: rotate(-5deg) scale(1.1);
 }
 
 img[src^="projectsImg/"] {
     width: 100%;
+    height: auto;
 }
 
 .myprojects .listofprojects .projectsinfo {
@@ -227,7 +262,7 @@ img[src^="projectsImg/"] {
     background-color: #48CFCB;
     padding: 5px;
     border-radius: 10px;
-    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .5);
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .5);
 }
 
 .projbutton a {
@@ -237,7 +272,7 @@ img[src^="projectsImg/"] {
 
 .projbutton:hover {
     cursor: pointer;
-    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, .5);
+    box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, .5);
 }
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -245,13 +280,13 @@ img[src^="projectsImg/"] {
 
 .contactArea {
     position: relative;
-    z-index: 0;
+    z-index: 1;
     height: 70vh;
     padding: 40px 100px;
     display: grid;
     grid-template-columns: 4fr 3fr;
-    background: #F5F5F5;
     direction: rtl;
+    box-shadow:  rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 
@@ -348,6 +383,7 @@ img[src^="projectsImg/"] {
 
 .contactArea .formArea .formBox input,
 .contactArea .formArea .formBox textarea {
+    width: 100%;
     margin-bottom: 5px;
     border: none;
     border-radius: 50px;
@@ -375,6 +411,7 @@ img[src^="projectsImg/"] {
 }
 
 .contactArea .formArea .formBox input[type="submit"] {
+    width: 100%;
     font-family: Rubik;
     background-color: #48CFCB;
     padding: 10px;
@@ -389,13 +426,13 @@ img[src^="projectsImg/"] {
 
 footer {
     position: relative;
-    z-index: 0;
+    z-index: 2;
     height: 70px;
-    background-color: #48CFCB;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     padding: 10px 100px;
+    box-shadow: rgba(14, 30, 37, 0.32) 0px 2px 8px 0px;
 }
 
 footer h3 {
@@ -440,13 +477,14 @@ footer .social img[alt~="thumbnail"] {
     }
 
     header#mobileNav nav {
+        position: relative;
+        z-index: 1;
         flex-grow: 1;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: end;
-        background-color: #F5F5F5;
-        border-bottom: 1px solid black;
+        box-shadow: rgba(14, 30, 37, 0.32) 0px 2px 8px 0px;
     }
 
     header#mobileNav nav ul {
@@ -513,13 +551,13 @@ footer .social img[alt~="thumbnail"] {
         flex-basis: 0;
         direction: rtl;
         align-items: center;
+        padding-right: 0;
     }
 
-    .myprojects .projTextArea div {
-        display: flex;
-        flex-direction: column;
-        margin-right: 50px;
+    .myprojects .projTextArea p{
+        text-align: center;
     }
+
 
     .myprojects .listofprojects {
         display: grid;
@@ -530,13 +568,16 @@ footer .social img[alt~="thumbnail"] {
     }
 
     .myprojects .listofprojects .projectexample {
-        height: 270px;
+        height: fit-content;
         text-align: center;
     }
     .lastLineProject{
         grid-column: 1/2;
     }
 
+    .projbutton{
+        margin-bottom: 10px;
+    }
     /*----------------------------------------------------------------------------------------------------------------------------------------------- */
     /*------------------------------------------------------------ Contact AREA stuff---------------------------------------------------------------- */
     .contactArea {
@@ -576,8 +617,8 @@ footer .social img[alt~="thumbnail"] {
     .contactArea .formArea .formBox {
         display: flex;
         margin: 20px 30px;
-
     }
+
 
     /*---------------------------------------------------------------------------------------------------------------------------------------------- */
     /*---------------------------------------------------------------- Footer stuff----------------------------------------------------------------- */
