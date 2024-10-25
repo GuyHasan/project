@@ -205,6 +205,11 @@ img[alt~="profile"] {
     font-size: 1rem;
 }
 
+img[src="images/svg/gaming.svg"]{
+    height: 80px;
+    transform: translateY(-25px);
+}
+
 .hobbies{
     height: 80px;
     position: absolute;
@@ -229,9 +234,7 @@ img.hobbies[src="images/svg/movies.svg"]{
     left: 300px;
     transform: rotate(330deg);
 }
-img.hobbies[src="images/svg/gaming.svg"]{
-    bottom: 20px;
-}
+
 
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
