@@ -127,7 +127,8 @@ ul#DsNav li a:hover {
     flex-direction: column;
     background-color: aqua;
     height: 90vh;
-    justify-content: space-evenly;
+    justify-content: center;
+    padding-left: 150px;
     
 }
 
@@ -135,15 +136,12 @@ ul#DsNav li a:hover {
     top: 0px;
 }
 
-.mainarea .mainareaText {
-    margin-left: 150px;
-}
 
-.mainarea .mainareaText p{
+.mainarea  p{
     width: 70%;
 }
 
-.mainarea .mainareaText .awesome{
+.mainarea .awesome{
     font-style: italic;
     font-weight: bold;
     text-shadow: rgba(255, 255, 255, 0.644) 1px 0 6px;
@@ -182,6 +180,8 @@ img[alt~="profile"] {
     height: 190px;
 }
 
+/* resume button stuff */
+
 .resumeBtn{
     position: relative;
     z-index: 2;
@@ -204,6 +204,8 @@ img[alt~="profile"] {
     color: #272727;
     font-size: 1rem;
 }
+
+/* About me Svg's styling */
 
 img[src="images/svg/gaming.svg"]{
     height: 80px;
@@ -253,6 +255,7 @@ img.hobbies[src="images/svg/movies.svg"]{
     top: 0px;
 }
 
+/* Project Section Text Designs */
 .myprojects .projTextArea {
     display: flex;
     flex-basis: 0;
@@ -273,6 +276,9 @@ img.hobbies[src="images/svg/movies.svg"]{
     line-height: 1.5;
 }
 
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*----------------------------------------- projects Cards design And Structure----------------------------------------------------------------- */
+
 
 .myprojects .listofprojects {
     display: grid;
@@ -284,10 +290,12 @@ img.hobbies[src="images/svg/movies.svg"]{
     row-gap: 15px;
     column-gap: 40px;
 }
+
 .lastLineProject{
     grid-column: 2/3;
 }
 
+/* Project Card Design */
 .myprojects .listofprojects .projectexample {
     display: flex;
     flex-direction: column;
@@ -310,6 +318,7 @@ img[src^="projectsImg/"] {
     height: auto;
 }
 
+/* Project Card info */
 .myprojects .listofprojects .projectexample .projectsinfo {
     display: flex;
     align-items: center;
@@ -322,6 +331,8 @@ img[src^="projectsImg/"] {
 .myprojects .listofprojects .projectexample .projectsinfo p{
     width: 80%;
 }
+
+/* Project Card Button */
 .projbutton {
     background-color: #48CFCB;
     padding: 5px;
@@ -594,13 +605,13 @@ footer .social img[alt~="thumbnail"] {
         display: flex;
         flex-direction: column;
         height: 70vh;
-        justify-content: space-evenly;
-    }
-
-    .mainarea .mainareaText {
-        margin-left: auto;
+        justify-content: center;
         padding-left: 20px;
     }
+    .mainarea>*{
+        margin-bottom: 10px;
+    }
+
 
     /*---------------------------------------------------------------------------------------------------------------------------------------------- */
     /*--------------------------------------------------------- About Me AREA stuff----------------------------------------------------------------- */
