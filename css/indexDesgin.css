@@ -139,6 +139,16 @@ ul#DsNav li a:hover {
     margin-left: 150px;
 }
 
+.mainarea .mainareaText p{
+    width: 70%;
+}
+
+.mainarea .mainareaText .awesome{
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: rgba(255, 255, 255, 0.644) 1px 0 6px;
+}
+
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 /*--------------------------------------------------------- About Me AREA stuff----------------------------------------------------------------- */
@@ -150,7 +160,7 @@ ul#DsNav li a:hover {
     flex-direction: column;
     height: 60vh;
     justify-content: center;
-    text-align: center;
+    align-items: center;
     direction: rtl;
     box-shadow:  rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
@@ -163,18 +173,66 @@ ul#DsNav li a:hover {
     top: -150px;
 }
 
+.aboutme p{
+    width: 30%;
+    text-align: center;
+    line-height: 2;
+}
 img[alt~="profile"] {
     height: 190px;
 }
 
 .resumeBtn{
+    position: relative;
+    z-index: 2;
     width: fit-content;
-    align-self: center;
     background-color: #48CFCB;
-    padding: 5px;
+    padding: 10px;
     border-radius: 10px;
     border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: all ease-in-out 1s;
 }
+
+.resumeBtn:hover{
+    transform: scale(1.1);
+}
+
+.resumeBtn a{
+    font-family: rubik;
+    text-decoration: none;
+    color: #272727;
+    font-size: 1rem;
+}
+
+.hobbies{
+    height: 80px;
+    position: absolute;
+}
+
+img.hobbies[src="images/svg/basketball.svg"]{
+    top: 100px;
+    right: 300px;
+    transform: rotate(340deg);
+}
+img.hobbies[src="images/svg/dumbbell.svg"]{
+    bottom: 100px;
+    right: 250px;
+    transform: rotate(30deg);
+}
+img.hobbies[src="images/svg/headphones.svg"]{
+    top: 100px;
+    left: 250px;
+}
+img.hobbies[src="images/svg/movies.svg"]{
+    bottom: 100px;
+    left: 300px;
+    transform: rotate(330deg);
+}
+img.hobbies[src="images/svg/gaming.svg"]{
+    bottom: 20px;
+}
+
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 /*--------------------------------------------------------- projects AREA stuff----------------------------------------------------------------- */
@@ -249,7 +307,7 @@ img[src^="projectsImg/"] {
     height: auto;
 }
 
-.myprojects .listofprojects .projectsinfo {
+.myprojects .listofprojects .projectexample .projectsinfo {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -258,6 +316,9 @@ img[src^="projectsImg/"] {
     flex-direction: column;
 }
 
+.myprojects .listofprojects .projectexample .projectsinfo p{
+    width: 80%;
+}
 .projbutton {
     background-color: #48CFCB;
     padding: 5px;
@@ -419,6 +480,7 @@ img[src^="projectsImg/"] {
     border: none;
     border-radius: 10px;
     box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .5);
+    cursor: pointer;
 }
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -537,6 +599,22 @@ footer .social img[alt~="thumbnail"] {
         padding-left: 20px;
     }
 
+    /*---------------------------------------------------------------------------------------------------------------------------------------------- */
+    /*--------------------------------------------------------- About Me AREA stuff----------------------------------------------------------------- */
+
+    .aboutme{
+        height: fit-content;
+        padding: 50px 0px;
+    }
+
+    .aboutme p{
+        width: 80%;
+    }
+    
+    .aboutme .hobbies{
+        display: none;
+    }
+
     /*----------------------------------------------------------------------------------------------------------------------------------------------- */
     /*---------------------------------------------------------- projects AREA stuff---------------------------------------------------------------- */
     .myprojects {
@@ -571,13 +649,16 @@ footer .social img[alt~="thumbnail"] {
         height: fit-content;
         text-align: center;
     }
+
+    .myprojects .listofprojects .projectexample .projectsinfo>*{
+    margin: 10px 0px;
+    }
+
+
     .lastLineProject{
         grid-column: 1/2;
     }
 
-    .projbutton{
-        margin-bottom: 10px;
-    }
     /*----------------------------------------------------------------------------------------------------------------------------------------------- */
     /*------------------------------------------------------------ Contact AREA stuff---------------------------------------------------------------- */
     .contactArea {
