@@ -403,8 +403,8 @@ img[src^="projectsImg/"] {
 .contactArea .formArea .formBox form {
     display: grid;
     grid-template-areas:
-        'phonenumberLabel fullnameLabel'
-        'phonenumberInput fullnameInput'
+        'fullnameLabel phonenumberLabel'
+        'fullnameInput phonenumberInput'
         'emailLabel emailLabel'
         'emailInput emailInput'
         'textareaLabel textareaLabel'
