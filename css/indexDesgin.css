@@ -731,3 +731,59 @@ footer .social img[alt~="thumbnail"] {
 
     }
 }
+
+
+@media (max-width: 992px) { 
+    .aboutme{
+        height: fit-content;
+    }
+    .hobbies{
+        display: none;
+    }
+
+    .myprojects .listofprojects .projectexample{
+        height: fit-content;
+    }
+    /*----------------------------------------------------------------------------------------------------------------------------------------------- */
+    /*------------------------------------------------------------ Contact AREA stuff---------------------------------------------------------------- */
+    .contactArea {
+        padding: 30px 10px;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contactArea .contactAreainfo {
+        display: flex;
+        padding: 0;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contactArea .contactAreainfo h2 {
+        margin-bottom: 20px;
+    }
+
+    .contactArea .contactAreainfo p {
+        text-align: center;
+    }
+
+    .contactArea .formArea {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .contactArea .formArea .seconderyTitles {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .contactArea .formArea .formBox {
+        display: flex;
+        margin: 20px 30px;
+    }
+
+
+ }
