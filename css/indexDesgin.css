@@ -314,7 +314,7 @@ img.hobbies[src="images/svg/movies.svg"] {
 .myprojects .listofprojects .projectexample {
     display: flex;
     flex-direction: column;
-    height: 37vh;
+    height: 40vh;
     background-color: #F5F5F5;
     box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .5);
     border-radius: 10%;
@@ -364,6 +364,7 @@ img[src^="projectsImg/"] {
     padding: 5px;
     border-radius: 10px;
     box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .5);
+    margin-bottom: 15px;
 }
 
 .projbutton a {
@@ -559,6 +560,86 @@ footer .social {
 footer .social img[alt~="thumbnail"] {
     height: 35px;
 }
+
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*------------------------------------------------ media query mid size stuff------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 1200px) {
+    .aboutme {
+        height: fit-content;
+    }
+
+    .hobbies {
+        display: none;
+    }
+
+    .myprojects .listofprojects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .myprojects .listofprojects .projectexample {
+        height: fit-content;
+    }
+
+    .myprojects .listofprojects .projectexample>* {
+        margin-bottom: 10px;
+    }
+
+    .myprojects .listofprojects .projectexample .projectsinfo>* {
+        margin-bottom: 15px;
+    }
+
+    /*----------------------------------------------------------------------------------------------------------------------------------------------- */
+    /*------------------------------------------------------------ Contact AREA stuff---------------------------------------------------------------- */
+    .contactArea {
+        padding: 30px 150px;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contactArea .contactAreainfo {
+        display: flex;
+        padding: 0;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contactArea .contactAreainfo h2 {
+        margin-bottom: 20px;
+    }
+
+    .contactArea .contactAreainfo p {
+        text-align: center;
+    }
+
+    .contactArea .formArea {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .contactArea .formArea .seconderyTitles {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .contactArea .formArea .formBox {
+        display: flex;
+        margin: 20px 30px;
+    }
+
+
+}
+
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -761,62 +842,4 @@ footer .social img[alt~="thumbnail"] {
         height: 25px;
 
     }
-}
-
-
-@media (max-width: 992px) {
-    .aboutme {
-        height: fit-content;
-    }
-
-    .hobbies {
-        display: none;
-    }
-
-    .myprojects .listofprojects .projectexample {
-        height: fit-content;
-    }
-
-    /*----------------------------------------------------------------------------------------------------------------------------------------------- */
-    /*------------------------------------------------------------ Contact AREA stuff---------------------------------------------------------------- */
-    .contactArea {
-        padding: 30px 10px;
-        height: max-content;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .contactArea .contactAreainfo {
-        display: flex;
-        padding: 0;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .contactArea .contactAreainfo h2 {
-        margin-bottom: 20px;
-    }
-
-    .contactArea .contactAreainfo p {
-        text-align: center;
-    }
-
-    .contactArea .formArea {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-    }
-
-    .contactArea .formArea .seconderyTitles {
-        margin-top: 10px;
-        text-align: center;
-    }
-
-    .contactArea .formArea .formBox {
-        display: flex;
-        margin: 20px 30px;
-    }
-
-
 }
