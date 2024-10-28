@@ -816,6 +816,10 @@ footer .social img[alt~="thumbnail"] {
         text-align: center;
     }
 
+    .myprojects .listofprojects .projectexample:hover {
+        transform: none;
+    }
+
     .myprojects .listofprojects .projectexample .projectsinfo>* {
         margin: 10px 0px;
     }
