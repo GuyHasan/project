@@ -17,9 +17,6 @@ body {
     align-items: center;
 }
 
-.bgMobileImg {
-    display: none;
-}
 
 .contentArea .bgImg {
     position: absolute;
@@ -105,20 +102,25 @@ input[type="submit"] {
 @media (max-width:576px) {
 
     .contentArea {
-        display: none;
+        height: 30vh;
     }
 
-    .bgMobileImg {
-        display: block;
-        width: 100%;
-        height: auto;
-        margin-bottom: 40px;
+    .contentArea p {
+        width: 80%;
     }
+
+    .contentArea .bgImg {
+        height: 30vh;
+        width: auto;
+        top: 0px;
+    }
+
+
 
     .formArea {
         display: flex;
         flex-direction: column;
-        justify-content: end;
+        justify-content: center;
         align-items: center;
         height: 60vh;
         padding-top: 0px;
@@ -127,8 +129,8 @@ input[type="submit"] {
 
     .formArea form {
         display: flex;
-        width: 100%;
-        padding: 0px 42px;
+        width: 80%;
+        padding: 0px;
         flex-direction: column;
         justify-content: start;
 
