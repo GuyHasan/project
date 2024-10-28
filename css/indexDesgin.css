@@ -685,7 +685,7 @@ footer .social img[alt~="thumbnail"] {
         width: 100vw;
         box-shadow: rgba(14, 30, 37, 0.32) 0px 2px 8px 0px;
         justify-content: space-between;
-        padding: 0 30px;
+        padding: 10px 30px;
     }
 
     header#mobileNav .navTitle {
@@ -782,6 +782,10 @@ footer .social img[alt~="thumbnail"] {
         height: fit-content;
         padding: 50px 0px;
         flex-direction: column;
+    }
+
+    .myprojects .anchorRef {
+        top: -50px;
     }
 
     .myprojects .projTextArea {
