@@ -1,8 +1,10 @@
 /*--------------------------------------------------------- Color stuff----------------------------------------------------------------------- */
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 /*
-#48CFCB - תכלת בהיר
-#229799 - תכלת כהה
+#FAF7F0 - שמנת
+#D8D2C2 - ב'ז כהה
+#B17457 - אדום חום 
+#4A4947 - חום כהה
 #272727 - שחור אפרפר
 #F5F5F5 - אפרפר עדין 
 */
@@ -28,6 +30,7 @@ body {
 
 .headTitles {
     font-size: clamp(2.5rem, 8.725vw - 3.095rem, 7.375rem);
+    color: #4A4947;
 }
 
 .seconderyTitles {
@@ -42,27 +45,35 @@ body {
     position: absolute;
 }
 
-.firstBackground{
-        --s: 100px; /* control the size*/
-        --c1: #48CFCB;
-        --c2: #48cfcbde;
-        --c:var(--c2) 20% 30%;
-        background:
-        linear-gradient(135deg,#0000 20%,var(--c),#0000 0),
-        repeating-linear-gradient(45deg,var(--c),var(--c1) 0 70%);
-        background-size: var(--s) var(--s);
+.firstBackground {
+    --s: 1026px;
+    /* control the size*/
+    --c1: #FAF7F0;
+    --c2: #D8D2C2;
+
+    --c: var(--c1) 25%;
+    background:
+        conic-gradient(from -45deg at 75% 12.5%, var(--c), #0000 0),
+        conic-gradient(from 135deg at 25% 87.5%, var(--c), #0000 0) 0 calc(var(--s)/2),
+        conic-gradient(from 180deg at 50% 75%, #0000 62.5%, var(--c)),
+        conic-gradient(at 50% 25%, #0000 62.5%, var(--c)) 0 calc(var(--s)/2) var(--c2);
+    background-size: var(--s) calc(2*var(--s));
 }
 
-.seconderyBackground{
-        --s: 11px; /* control the size*/
-        --c1: #ffffff;
-        --c2: #fcfcfc;
-        --c:var(--c2) 20% 30%;
-        background:
-        linear-gradient(135deg,#0000 20%,var(--c),#0000 0),
-        repeating-linear-gradient(45deg,var(--c),var(--c1) 0 70%);
-        background-size: var(--s) var(--s);
+.seconderyBackground {
+    --s: 2021px;
+    /* control the size*/
+    --c1: #fefdf9;
+    --c2: #fffdf9c4;
+    --c: var(--c2) 20% 30%;
+    background:
+        linear-gradient(135deg, #0000 20%, var(--c), #0000 0),
+        repeating-linear-gradient(45deg, var(--c), var(--c1) 0 70%);
+    background-size: var(--s) var(--s);
 }
+
+
+
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 /*------------------------------------------------------- Mobile Nav stuff---------------------------------------------------------------------- */
 
@@ -125,11 +136,10 @@ ul#DsNav li a:hover {
     z-index: 0;
     display: flex;
     flex-direction: column;
-    background-color: aqua;
     height: 90vh;
     justify-content: center;
     padding-left: 150px;
-    
+
 }
 
 .mainarea .anchorRef {
@@ -137,11 +147,11 @@ ul#DsNav li a:hover {
 }
 
 
-.mainarea  p{
+.mainarea p {
     width: 70%;
 }
 
-.mainarea .awesome{
+.mainarea .awesome {
     font-style: italic;
     font-weight: bold;
     text-shadow: rgba(255, 255, 255, 0.644) 1px 0 6px;
@@ -160,7 +170,7 @@ ul#DsNav li a:hover {
     justify-content: center;
     align-items: center;
     direction: rtl;
-    box-shadow:  rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    box-shadow: rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 .aboutme>* {
@@ -171,22 +181,23 @@ ul#DsNav li a:hover {
     top: -150px;
 }
 
-.aboutme p{
+.aboutme p {
     width: 30%;
     text-align: center;
     line-height: 2;
 }
+
 img[alt~="profile"] {
     height: 190px;
 }
 
 /* resume button stuff */
 
-.resumeBtn{
+.resumeBtn {
     position: relative;
     z-index: 2;
     width: fit-content;
-    background-color: #48CFCB;
+    background-color: #B17457;
     padding: 10px;
     border-radius: 10px;
     border: none;
@@ -194,44 +205,48 @@ img[alt~="profile"] {
     transition: all ease-in-out 1s;
 }
 
-.resumeBtn:hover{
+.resumeBtn:hover {
     transform: scale(1.1);
 }
 
-.resumeBtn a{
+.resumeBtn a {
     font-family: rubik;
     text-decoration: none;
     color: #272727;
     font-size: 1rem;
+    font-weight: bold;
 }
 
 /* About me Svg's styling */
 
-img[src="images/svg/gaming.svg"]{
+img[src="images/svg/gaming.svg"] {
     height: 80px;
     transform: translateY(-25px);
 }
 
-.hobbies{
+.hobbies {
     height: 80px;
     position: absolute;
 }
 
-img.hobbies[src="images/svg/basketball.svg"]{
+img.hobbies[src="images/svg/basketball.svg"] {
     top: 100px;
     right: 300px;
     transform: rotate(340deg);
 }
-img.hobbies[src="images/svg/dumbbell.svg"]{
+
+img.hobbies[src="images/svg/dumbbell.svg"] {
     bottom: 100px;
     right: 250px;
     transform: rotate(30deg);
 }
-img.hobbies[src="images/svg/headphones.svg"]{
+
+img.hobbies[src="images/svg/headphones.svg"] {
     top: 100px;
     left: 250px;
 }
-img.hobbies[src="images/svg/movies.svg"]{
+
+img.hobbies[src="images/svg/movies.svg"] {
     bottom: 100px;
     left: 300px;
     transform: rotate(330deg);
@@ -247,7 +262,7 @@ img.hobbies[src="images/svg/movies.svg"]{
     z-index: 0;
     display: flex;
     height: fit-content;
-    padding: 50px 100px;
+    padding: 150px 100px;
     flex-direction: row-reverse;
 }
 
@@ -291,7 +306,7 @@ img.hobbies[src="images/svg/movies.svg"]{
     column-gap: 40px;
 }
 
-.lastLineProject{
+.lastLineProject {
     grid-column: 2/3;
 }
 
@@ -309,7 +324,7 @@ img.hobbies[src="images/svg/movies.svg"]{
     transition: all ease-in-out 1s;
 }
 
-.myprojects .listofprojects .projectexample:hover{
+.myprojects .listofprojects .projectexample:hover {
     transform: rotate(-5deg) scale(1.1);
 }
 
@@ -328,13 +343,24 @@ img[src^="projectsImg/"] {
     flex-direction: column;
 }
 
-.myprojects .listofprojects .projectexample .projectsinfo p{
+/* Project Card tech logos */
+.techUsed {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.techUsed img {
+    height: 30px;
+}
+
+.myprojects .listofprojects .projectexample .projectsinfo p {
     width: 80%;
 }
 
 /* Project Card Button */
 .projbutton {
-    background-color: #48CFCB;
+    background-color: #B17457;
     padding: 5px;
     border-radius: 10px;
     box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .5);
@@ -361,7 +387,7 @@ img[src^="projectsImg/"] {
     display: grid;
     grid-template-columns: 4fr 3fr;
     direction: rtl;
-    box-shadow:  rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    box-shadow: rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 
@@ -388,6 +414,7 @@ img[src^="projectsImg/"] {
     margin-top: 10px;
     text-align: center;
 }
+
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 /*--------------------------------------------------------- FormStructure stuff----------------------------------------------------------------- */
 .contactArea .formArea .formBox {
@@ -410,47 +437,47 @@ img[src^="projectsImg/"] {
         'textareaLabel textareaLabel'
         'textareaInput textareaInput'
         'formButton formButton'
-        ;
-    grid-template-columns: repeat(2,1fr);
+    ;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(7, auto);
     column-gap: 10px;
     row-gap: 5px;
 }
 
-.fullnameLabel{
+.fullnameLabel {
     grid-area: fullnameLabel;
 }
 
-.phonenumberLabel{
+.phonenumberLabel {
     grid-area: phonenumberLabel;
 }
 
-.emailLabel{
+.emailLabel {
     grid-area: emailLabel;
 }
 
-.textareaLabel{
+.textareaLabel {
     grid-area: textareaLabel;
 }
 
 
-.fullnameInput{
+.fullnameInput {
     grid-area: fullnameInput;
 }
 
-.phonenumberInput{
+.phonenumberInput {
     grid-area: phonenumberInput;
 }
 
-.emailInput{
+.emailInput {
     grid-area: emailInput;
 }
 
-.textareaInput{
+.textareaInput {
     grid-area: textareaInput;
 }
 
-.formButton{
+.formButton {
     grid-area: formButton;
 }
 
@@ -462,7 +489,7 @@ img[src^="projectsImg/"] {
     margin-bottom: 5px;
     border: none;
     border-radius: 50px;
-    background-color: #8cccca4d;
+    background-color: #D8D2C24d;
     box-shadow: 0px 0px 6px 0px rgba(168, 166, 168, 0.75);
     font-family: Rubik;
     direction: rtl;
@@ -482,19 +509,23 @@ img[src^="projectsImg/"] {
     text-wrap: balance;
     resize: none;
     height: 5rem;
-    
+
 }
 
 .contactArea .formArea .formBox input[type="submit"] {
     width: 100%;
     font-family: Rubik;
-    background-color: #48CFCB;
+    background-color: #B17457;
     padding: 10px;
-    height: 2rem;
+    height: 2.5rem;
     border: none;
     border-radius: 10px;
     box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .5);
     cursor: pointer;
+}
+
+.contactArea .formArea .formBox input[type="submit"]:hover {
+    box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, .5);
 }
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -502,13 +533,12 @@ img[src^="projectsImg/"] {
 
 footer {
     position: relative;
-    z-index: 2;
+    z-index: 0;
     height: 70px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     padding: 10px 100px;
-    box-shadow: rgba(14, 30, 37, 0.32) 0px 2px 8px 0px;
 }
 
 footer h3 {
@@ -608,7 +638,8 @@ footer .social img[alt~="thumbnail"] {
         justify-content: center;
         padding-left: 20px;
     }
-    .mainarea>*{
+
+    .mainarea>* {
         margin-bottom: 10px;
     }
 
@@ -616,16 +647,16 @@ footer .social img[alt~="thumbnail"] {
     /*---------------------------------------------------------------------------------------------------------------------------------------------- */
     /*--------------------------------------------------------- About Me AREA stuff----------------------------------------------------------------- */
 
-    .aboutme{
+    .aboutme {
         height: fit-content;
         padding: 50px 0px;
     }
 
-    .aboutme p{
+    .aboutme p {
         width: 80%;
     }
-    
-    .aboutme .hobbies{
+
+    .aboutme .hobbies {
         display: none;
     }
 
@@ -646,7 +677,7 @@ footer .social img[alt~="thumbnail"] {
         padding-right: 0;
     }
 
-    .myprojects .projTextArea p{
+    .myprojects .projTextArea p {
         text-align: center;
     }
 
@@ -664,12 +695,12 @@ footer .social img[alt~="thumbnail"] {
         text-align: center;
     }
 
-    .myprojects .listofprojects .projectexample .projectsinfo>*{
-    margin: 10px 0px;
+    .myprojects .listofprojects .projectexample .projectsinfo>* {
+        margin: 10px 0px;
     }
 
 
-    .lastLineProject{
+    .lastLineProject {
         grid-column: 1/2;
     }
 
@@ -733,17 +764,19 @@ footer .social img[alt~="thumbnail"] {
 }
 
 
-@media (max-width: 992px) { 
-    .aboutme{
+@media (max-width: 992px) {
+    .aboutme {
         height: fit-content;
     }
-    .hobbies{
+
+    .hobbies {
         display: none;
     }
 
-    .myprojects .listofprojects .projectexample{
+    .myprojects .listofprojects .projectexample {
         height: fit-content;
     }
+
     /*----------------------------------------------------------------------------------------------------------------------------------------------- */
     /*------------------------------------------------------------ Contact AREA stuff---------------------------------------------------------------- */
     .contactArea {
@@ -786,4 +819,4 @@ footer .social img[alt~="thumbnail"] {
     }
 
 
- }
+}
