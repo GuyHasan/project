@@ -267,7 +267,7 @@ img.hobbies[src="images/svg/movies.svg"] {
 }
 
 .myprojects .anchorRef {
-    top: 0px;
+    top: 5vh;
 }
 
 /* Project Section Text Designs */
@@ -522,12 +522,14 @@ img[src^="projectsImg/"] {
     height: 2.5rem;
     border: none;
     border-radius: 10px;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, .5);
     cursor: pointer;
+    transition: all ease-in-out 1s;
 }
 
 .contactArea .formArea .formBox input[type="submit"]:hover {
-    box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, .5);
+    box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, .5);
+    transform: scale(1.05);
 }
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
