@@ -316,7 +316,7 @@ img.hobbies[src="images/svg/movies.svg"] {
     flex-direction: column;
     height: 40vh;
     background-color: #F5F5F5;
-    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .5);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, .5);
     border-radius: 10%;
     overflow: hidden;
     text-align: center;
@@ -409,6 +409,7 @@ img[src^="projectsImg/"] {
 .contactArea .formArea {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .contactArea .formArea .seconderyTitles {
@@ -419,13 +420,13 @@ img[src^="projectsImg/"] {
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 /*--------------------------------------------------------- FormStructure stuff----------------------------------------------------------------- */
 .contactArea .formArea .formBox {
-    flex-grow: 1;
     box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .5);
     border-radius: 10%;
     margin: 20px 80px;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
+    padding: 20px 30px;
+
 }
 
 .contactArea .formArea .formBox form {
@@ -496,7 +497,7 @@ img[src^="projectsImg/"] {
     direction: rtl;
     padding-right: 6px;
     margin-bottom: 20px;
-    height: 2rem;
+    height: 3rem;
 }
 
 
@@ -509,7 +510,7 @@ img[src^="projectsImg/"] {
     align-items: left;
     text-wrap: balance;
     resize: none;
-    height: 5rem;
+    height: 6rem;
 
 }
 
@@ -521,7 +522,7 @@ img[src^="projectsImg/"] {
     height: 2.5rem;
     border: none;
     border-radius: 10px;
-    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .5);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
     cursor: pointer;
 }
 
@@ -652,6 +653,10 @@ footer .social img[alt~="thumbnail"] {
     .myprojects {
         flex-direction: column;
     }
+
+    .contactArea {
+        padding: 40px 60px;
+    }
 }
 
 
@@ -675,17 +680,33 @@ footer .social img[alt~="thumbnail"] {
 
     header#mobileNav {
         display: flex;
+        position: fixed;
+        z-index: 5;
+        width: 100vw;
+        box-shadow: rgba(14, 30, 37, 0.32) 0px 2px 8px 0px;
+        justify-content: space-between;
+        padding: 0 30px;
+    }
+
+    header#mobileNav .navTitle {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    header#mobileNav .navTitle h3 {
+        line-height: 2;
+    }
+
+    header#mobileNav .navTitle img {
+        height: 40px;
+        margin-right: 5px;
+        ;
     }
 
     header#mobileNav nav {
-        position: fixed;
-        z-index: 5;
-        flex-grow: 1;
-        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: end;
-        box-shadow: rgba(14, 30, 37, 0.32) 0px 2px 8px 0px;
     }
 
     header#mobileNav nav ul {
@@ -704,7 +725,6 @@ footer .social img[alt~="thumbnail"] {
 
     img[src="images/svg/hamburger.svg"] {
         height: 40px;
-        padding-right: 30px;
     }
 
 
