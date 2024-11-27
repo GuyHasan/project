@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+
+/*--------------------------------------------------------- General stuff----------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hide {
+    display: none;
+}
+
+body {
+    background-color: #f1f1f1;
+    font-family: Outfit;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="10" y="20" font-size="20" fill="%23333" opacity="0.2">?</text><text x="50" y="50" font-size="20" fill="%23333" opacity="0.2">?</text><text x="30" y="80" font-size="20" fill="%23333" opacity="0.2">?</text></svg>');
+    background-size: 100px;
+    /* Adjust the size as needed */
+    background-repeat: repeat;
+    background-position: center;
+    background-clip: content-box;
+}
+
+.wrap {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.wrap>* {
+    margin-bottom: 20px;
+}
+
+/*--------------------------------------------------------- Text and Img stuff------------------------------------------------------------------ */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.returnBack {
+    height: 40px;
+}
+
+.returnBack:hover {
+    cursor: pointer;
+}
+
+
+.wrap h1 {
+    font-size: clamp(2.5rem, 3.356vw + 0.348rem, 4.375rem);
+    font-family: Bangers;
+    font-weight: bold;
+    color: #333;
+}
+
+/*--------------------------------------------------------- Buttons stuff----------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.chooseButtons>* {
+    margin-right: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: clamp(1.25rem, 1.342vw + 0.389rem, 2rem);
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    font-family: Outfit;
+}
+
+.difficulty {
+    display: flex;
+    gap: 10px;
+}
+
+/*--------------------------------------------------------- GameBox stuff----------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.question {
+    font-size: 1.5rem;
+    color: #333;
+    text-align: justify
+}
+
+.answersDisplay {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+
+}
+
+.answerPara {
+    width: 100%;
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
+}
+
+.score {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/*----------------------------------------------------------- popUp stuff----------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.popUp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.popUpBox {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 2rem;
+    padding: 30px;
+    background-color: #f1f1f1;
+    color: black;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+
+/*----------------------------------------------------------- media query----------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 992px) {
+    .wrap {
+        padding: 20px 10vw;
+    }
+}
+
+@media (max-width: 576px) {
+    .wrap {
+        height: fit-content;
+    }
+}

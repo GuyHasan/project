@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+/*--------------------------------------------------------- General stuff----------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hide {
+    display: none;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.wrap>* {
+    margin: 20px;
+}
+
+.title {
+    font-family: 'Press Start 2P';
+    font-size: 2rem;
+    text-align: center;
+}
+
+/*--------------------------------------------------------- PokedexBox sturacture--------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.pokedexBox {
+    display: flex;
+    font-family: 'Lexend Deca';
+    height: 80vh;
+    width: 30vw;
+    background-color: #cb3434;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.pokemonDataView {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.screen {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+    background-color: skyblue;
+    border: 10px solid #81a6b4;
+    box-shadow: inset 0 0 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.underScreenRow {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    gap: 20px;
+}
+
+.generalInfo,
+.pokemonDescription {
+    width: 50%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.generalInfo {
+    padding: 15px;
+}
+
+.pokemonStats {
+    width: 100%;
+    height: 40%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+/*------------------------------------------------------------- PokedexBox screen--------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+.markTab {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.7rem;
+
+}
+
+.caught {
+    height: 30px;
+    width: auto;
+}
+
+.caught:hover {
+    cursor: pointer;
+}
+
+.searchDiv {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    bottom: 10px;
+    right: 0px;
+}
+
+.searchButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transform: translateX(-20px);
+}
+
+.search {
+    border: none;
+    padding: 5px;
+    width: 130px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.143);
+    background-color: #81ddff;
+    font-family: 'Lexend Deca';
+}
+
+.search:focus {
+    outline: none;
+}
+
+.pokemonId {
+    font-size: clamp(0.813rem, 0.783vw + 0.31rem, 1.25rem);
+}
+
+.pokemonName {
+    font-size: clamp(1rem, 1.79vw - 0.148rem, 2rem);
+    font-weight: bold;
+}
+
+.pokemonImg {
+    height: 50%;
+    width: auto;
+}
+
+/*--------------------------------------------------------- PokedexBox underScreenRow----------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+.generalInfo>* {
+    margin-bottom: 10px;
+}
+
+.typesRow {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.typeBox {
+    width: 30%;
+    text-align: center;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.143);
+    margin-bottom: 10px;
+    font-size: clamp(0.75rem, 0.447vw + 0.463rem, 1rem);
+}
+
+.pokemonWeight,
+.pokemonHeight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(0.75rem, 0.447vw + 0.463rem, 1rem);
+}
+
+.pokemonDescription {
+    display: flex;
+    justify-content: center;
+}
+
+.pokemonDescription p {
+    margin-top: 10px;
+    line-height: 1.5;
+    width: 80%;
+    padding: 5px;
+    text-align: left;
+    font-size: clamp(0.75rem, 0.447vw + 0.463rem, 1rem);
+}
+
+
+
+/*------------------------------------------------------------ PokedexBox stats----------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+.statGauge {
+    height: 15px;
+    border-radius: 2px;
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.statName {
+    font-size: clamp(0.625rem, 1.119vw - 0.092rem, 1.25rem);
+}
+
+
+/*------------------------------------------------------------ Buttons stuff-------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.buttonsRow {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+.button {
+    width: fit-content;
+    border: none;
+    padding: 10px;
+    background-color: #cecece;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.143);
+    cursor: pointer;
+    font-family: 'Lexend Deca';
+}
+
+/*--------------------------------------------------------- myPokemons sturacture--------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.myPokemonsDisplay {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #f2f2f2 #cb3434;
+}
+
+.favorite {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #fafafa;
+    border-radius: 8px;
+    box-shadow: inset 0 0 8px 1px rgba(0, 0, 0, 0.2);
+}
+
+.backToPokedex {
+    padding: 10px;
+    background-color: #cecece;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.143);
+    cursor: pointer;
+    font-family: 'Lexend Deca';
+    font-weight: bold;
+    border: none;
+    order: 9999;
+}
+
+
+
+
+
+/*------------------------------------------------------------- media query -------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 1199.98px) {
+    .pokedexBox {
+        width: 50vw;
+    }
+
+    .button {
+        width: 30%;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .pokedexBox {
+        width: 70vw;
+    }
+}
+
+@media (max-width: 576px) {
+    .wrap>* {
+        margin: 10px;
+    }
+
+    .title {
+        font-size: 1.1rem;
+    }
+
+    .pokedexBox {
+        width: 90vw;
+        height: 100vh;
+        gap: 15px;
+
+    }
+
+    .searchDiv {
+        position: static;
+    }
+
+    .underScreenRow {
+        height: 30%;
+    }
+
+    .pokemonDescription p {
+        margin-top: 0px;
+    }
+
+    .typeBox {
+        width: fit-content;
+    }
+
+    .statGauge {
+        height: 10px;
+    }
+
+    .buttonsRow {
+        gap: 7px;
+    }
+
+    .button {
+        padding: 3px;
+    }
+}

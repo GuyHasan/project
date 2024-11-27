@@ -5,8 +5,8 @@
                 {
                     "title": "ייעוץ עתיד",
                     "description": "זוהי דוגמה לעמוד נחיתה בעל רקע מחולק וטופס במרכזו ליצור משיכת עין.",
-                    "url": "projectsExamples/landingPage1/displayPage.html",
-                    "image": "images/projectsDisplayImages/landingPage1.jpg",
+                    "url": "projectsExamples/landingPages/landingPage1/displayPage.html",
+                    "image": "images/projectsDisplayImages/landingPages/landingPage1.jpg",
                     "tech": [
                         "html5",
                         "css3"
@@ -15,8 +15,8 @@
                 {
                     "title": "Here & Now",
                     "description": "זוהי דוגמה לעמוד נחיתה בסגנון הזמנה, שכל העמוד מתפקד כטופס שליחת פרטים גדול.",
-                    "url": "projectsExamples/landingPage2/displayPage.html",
-                    "image": "images/projectsDisplayImages/landingPage2.jpg",
+                    "url": "projectsExamples/landingPages/landingPage2/displayPage.html",
+                    "image": "images/projectsDisplayImages/landingPages/landingPage2.jpg",
                     "tech": [
                         "html5",
                         "css3"
@@ -25,8 +25,8 @@
                 {
                     "title": "קפה רינה",
                     "description": "זוהי דוגמה לעמוד נחיתה שנותן דגש למוצר העסק לדוגמה קפה הדגל של בית הקפה.",
-                    "url": "projectsExamples/landingPage3/displayPage.html",
-                    "image": "images/projectsDisplayImages/landingPage3.jpg",
+                    "url": "projectsExamples/landingPages/landingPage3/displayPage.html",
+                    "image": "images/projectsDisplayImages/landingPages/landingPage3.jpg",
                     "tech": [
                         "html5",
                         "css3"
@@ -35,8 +35,8 @@
                 {
                     "title": "אקדמאי לכולם",
                     "description": "זוהי דוגמה לעמוד נחיתה בצורת חץ המצביע לטופס השארת פרטים.",
-                    "url": "projectsExamples/landingPage4/displayPage.html",
-                    "image": "images/projectsDisplayImages/landingPage4.jpg",
+                    "url": "projectsExamples/landingPages/landingPage4/displayPage.html",
+                    "image": "images/projectsDisplayImages/landingPages/landingPage4.jpg",
                     "tech": [
                         "html5",
                         "css3"
@@ -45,8 +45,8 @@
                 {
                     "title": "סובב עולם",
                     "description": "זוהי דוגמה לעמוד נחיתה שבנוי בצורת גלרייה שמורכבת מתמונות, מידע ומקום ליצירת קשר.",
-                    "url": "projectsExamples/landingPage5/displayPage.html",
-                    "image": "images/projectsDisplayImages/landingPage5.jpg",
+                    "url": "projectsExamples/landingPages/landingPage5/displayPage.html",
+                    "image": "images/projectsDisplayImages/landingPages/landingPage5.jpg",
                     "tech": [
                         "html5",
                         "css3"
@@ -55,8 +55,8 @@
                 {
                     "title": "קידום צעיר",
                     "description": "זוהי דוגמה לעמוד נחיתה עם דגש על השארת פרטים ויצירת קשר גם דרך רשתות חברתיות בנוסף באמצעות סמלילים שלהם.",
-                    "url": "projectsExamples/landingPage6/displayPage.html",
-                    "image": "images/projectsDisplayImages/landingPage6.jpg",
+                    "url": "projectsExamples/landingPages/landingPage6/displayPage.html",
+                    "image": "images/projectsDisplayImages/landingPages/landingPage6.jpg",
                     "tech": [
                         "html5",
                         "css3"
@@ -65,8 +65,8 @@
                 {
                     "title": "לחשוב מחוץ לקופסא",
                     "description": "זוהי דוגמה לעמוד נחיתה שמשלב מספר אלמנטים כמו הטמעת מפה לטובת מיקום עסק, לינקים לרשתות חברתיות, יצירת קשר.",
-                    "url": "projectsExamples/landingPage7/displayPage.html",
-                    "image": "images/projectsDisplayImages/landingPage7.jpg",
+                    "url": "projectsExamples/landingPages/landingPage7/displayPage.html",
+                    "image": "images/projectsDisplayImages/landingPages/landingPage7.jpg",
                     "tech": [
                         "html5",
                         "css3"
@@ -77,10 +77,10 @@
         {
             "games": [
                 {
-                    "title": "Game 1",
-                    "description": "This is the first game",
-                    "url": "https://www.google.com",
-                    "image": "https://www.google.com",
+                    "title": "Meomory Game",
+                    "description": "משחק הזיכרון המוכר בגרסה מעוצבת ומעודכנת. מצאו את הזוגות המתאימים ובדקו את כישורי הזיכרון שלכם.",
+                    "url": "projectsExamples/games/memoryGame/index.html",
+                    "image": "images/projectsDisplayImages/games/memoryGame.jpg",
                     "tech": [
                         "html5",
                         "css3",
@@ -88,10 +88,10 @@
                     ]
                 },
                 {
-                    "title": "Game 2",
-                    "description": "This is the second game",
-                    "url": "https://www.google.com",
-                    "image": "https://www.google.com",
+                    "title": "Trivia Game",
+                    "description": "שחקו במבחן הטירוויה האולטימטיבי, בחנו את הידע הכללי שלכם והשוו את התוצאות עם חבריכם.",
+                    "url": "projectsExamples/games/triviaGame/index.html",
+                    "image": "images/projectsDisplayImages/games/triviaGame.jpg",
                     "tech": [
                         "html5",
                         "css3",
