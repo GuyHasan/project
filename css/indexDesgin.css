@@ -263,7 +263,7 @@ img.hobbies[src="images/svg/movies.svg"] {
     display: flex;
     height: fit-content;
     padding: 150px 100px;
-    flex-direction: row-reverse;
+    flex-direction: column;
 }
 
 .myprojects .anchorRef {
@@ -278,7 +278,7 @@ img.hobbies[src="images/svg/movies.svg"] {
     direction: rtl;
     flex-direction: column;
     justify-content: center;
-    padding-right: 50px;
+    align-items: center;
 }
 
 .myprojects .projTextArea h2 {
@@ -292,26 +292,73 @@ img.hobbies[src="images/svg/movies.svg"] {
 }
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*------------------------------------------------------- projects category selectors----------------------------------------------------------- */
+
+
+.projectsDisplay {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.selectorsRow {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 1px;
+}
+
+.selectorButton {
+    color: #4A4947;
+    font-size: clamp(1rem, 1.79vw - 0.148rem, 2rem);
+    border: none;
+    font-weight: bold;
+    font-family: rubik;
+    background: linear-gradient(to bottom, #B17457, rgba(177, 116, 87, 0.7));
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .5);
+}
+
+.selectorButton.returnButton {
+    height: 60px;
+}
+
+.returnButton {
+    height: 40px;
+    transform: scaleX(-1);
+    filter: brightness(0) saturate(100%) invert(26%) sepia(8%) saturate(169%) hue-rotate(2deg) brightness(94%) contrast(86%);
+}
+
+.selectorButton:hover {
+    cursor: pointer;
+    box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, .5);
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------- */
 /*----------------------------------------- projects Cards design And Structure----------------------------------------------------------------- */
 
 
-.myprojects .listofprojects {
+.listofprojects {
     display: grid;
     padding: 0px 50px;
+    justify-content: center;
     flex-basis: 0;
     flex-grow: 4;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 20%);
     grid-template-rows: repeat(auto, 1fr);
     row-gap: 15px;
     column-gap: 40px;
 }
 
-.lastLineProject {
-    grid-column: 2/3;
-}
 
 /* Project Card Design */
-.myprojects .listofprojects .projectexample {
+.projectexample {
     display: flex;
     flex-direction: column;
     height: 40vh;
@@ -324,7 +371,7 @@ img.hobbies[src="images/svg/movies.svg"] {
     transition: all ease-in-out 1s;
 }
 
-.myprojects .listofprojects .projectexample:hover {
+.projectexample:hover {
     transform: rotate(-1deg) scale(1.1);
 }
 
@@ -334,7 +381,7 @@ img[src^="projectsImg/"] {
 }
 
 /* Project Card info */
-.myprojects .listofprojects .projectexample .projectsinfo {
+.projectexample .projectsinfo {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -354,7 +401,7 @@ img[src^="projectsImg/"] {
     height: 30px;
 }
 
-.myprojects .listofprojects .projectexample .projectsinfo p {
+.projectexample .projectsinfo p {
     width: 80%;
 }
 
@@ -392,7 +439,7 @@ img[src^="projectsImg/"] {
 }
 
 
-.contactArea .contactAreainfo {
+.contactAreainfo {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -401,25 +448,25 @@ img[src^="projectsImg/"] {
     padding-bottom: 100px;
 }
 
-.contactArea .contactAreainfo h2 {
+.contactAreainfo h2 {
     margin-bottom: 20px;
 }
 
 
-.contactArea .formArea {
+.formArea {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.contactArea .formArea .seconderyTitles {
+.formArea .seconderyTitles {
     margin-top: 10px;
     text-align: center;
 }
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 /*--------------------------------------------------------- FormStructure stuff----------------------------------------------------------------- */
-.contactArea .formArea .formBox {
+.formBox {
     box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .5);
     border-radius: 10%;
     margin: 20px 80px;
@@ -429,7 +476,7 @@ img[src^="projectsImg/"] {
 
 }
 
-.contactArea .formArea .formBox form {
+.formBox form {
     display: grid;
     grid-template-areas:
         'fullnameLabel phonenumberLabel'
@@ -485,8 +532,8 @@ img[src^="projectsImg/"] {
 
 
 
-.contactArea .formArea .formBox input,
-.contactArea .formArea .formBox textarea {
+.formBox input,
+.formBox textarea {
     width: 100%;
     margin-bottom: 5px;
     border: none;
@@ -502,7 +549,7 @@ img[src^="projectsImg/"] {
 
 
 
-.contactArea .formArea .formBox textarea {
+.formBox textarea {
     border-radius: 20px;
     padding: 15px;
     line-height: 1rem;
@@ -514,7 +561,7 @@ img[src^="projectsImg/"] {
 
 }
 
-.contactArea .formArea .formBox input[type="submit"] {
+.formBox input[type="submit"] {
     width: 100%;
     font-family: Rubik;
     background-color: #B17457;
@@ -527,7 +574,7 @@ img[src^="projectsImg/"] {
     transition: all ease-in-out 1s;
 }
 
-.contactArea .formArea .formBox input[type="submit"]:hover {
+.formBox input[type="submit"]:hover {
     box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, .5);
     transform: scale(1.05);
 }
@@ -583,19 +630,19 @@ footer .social img[alt~="thumbnail"] {
         display: none;
     }
 
-    .myprojects .listofprojects {
+    .listofprojects {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .myprojects .listofprojects .projectexample {
+    .projectexample {
         height: fit-content;
     }
 
-    .myprojects .listofprojects .projectexample>* {
+    .projectexample>* {
         margin-bottom: 10px;
     }
 
-    .myprojects .listofprojects .projectexample .projectsinfo>* {
+    .projectexample .projectsinfo>* {
         margin-bottom: 15px;
     }
 
@@ -608,7 +655,7 @@ footer .social img[alt~="thumbnail"] {
         flex-direction: column;
     }
 
-    .contactArea .contactAreainfo {
+    .contactAreainfo {
         display: flex;
         padding: 0;
         align-items: center;
@@ -616,26 +663,26 @@ footer .social img[alt~="thumbnail"] {
         justify-content: center;
     }
 
-    .contactArea .contactAreainfo h2 {
+    .contactAreainfo h2 {
         margin-bottom: 20px;
     }
 
-    .contactArea .contactAreainfo p {
+    .contactAreainfo p {
         text-align: center;
     }
 
-    .contactArea .formArea {
+    .formArea {
         display: flex;
         flex-direction: column;
         flex-grow: 1;
     }
 
-    .contactArea .formArea .seconderyTitles {
+    .formArea .seconderyTitles {
         margin-top: 10px;
         text-align: center;
     }
 
-    .contactArea .formArea .formBox {
+    .formBox {
         display: flex;
         margin: 20px 30px;
     }
@@ -795,7 +842,7 @@ footer .social img[alt~="thumbnail"] {
         top: -50px;
     }
 
-    .myprojects .projTextArea {
+    .projTextArea {
         display: flex;
         flex-basis: 0;
         direction: rtl;
@@ -803,35 +850,38 @@ footer .social img[alt~="thumbnail"] {
         padding-right: 0;
     }
 
-    .myprojects .projTextArea p {
+    .projTextArea p {
         text-align: center;
     }
 
 
-    .myprojects .listofprojects {
+    .listofprojects {
         display: grid;
         flex-basis: 100vw;
-        padding: 50px 70px;
+        padding: 20px 70px 50px 70px;
         grid-template-columns: repeat(1, 1fr);
         row-gap: 30px;
     }
 
-    .myprojects .listofprojects .projectexample {
+    .projectexample {
         height: fit-content;
         text-align: center;
     }
 
-    .myprojects .listofprojects .projectexample:hover {
+    .projectexample:hover {
         transform: none;
     }
 
-    .myprojects .listofprojects .projectexample .projectsinfo>* {
+    .projectexample .projectsinfo>* {
         margin: 10px 0px;
     }
 
+    .projectsDisplay {
+        gap: 0px;
+    }
 
-    .lastLineProject {
-        grid-column: 1/2;
+    .selectorButton {
+        margin-bottom: 0px;
     }
 
     /*----------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -843,7 +893,7 @@ footer .social img[alt~="thumbnail"] {
         flex-direction: column;
     }
 
-    .contactArea .contactAreainfo {
+    .contactAreainfo {
         display: flex;
         padding: 0;
         align-items: center;
@@ -851,26 +901,26 @@ footer .social img[alt~="thumbnail"] {
         justify-content: center;
     }
 
-    .contactArea .contactAreainfo h2 {
+    .contactAreainfo h2 {
         margin-bottom: 20px;
     }
 
-    .contactArea .contactAreainfo p {
+    .contactAreainfo p {
         text-align: center;
     }
 
-    .contactArea .formArea {
+    .formArea {
         display: flex;
         flex-direction: column;
         flex-grow: 1;
     }
 
-    .contactArea .formArea .seconderyTitles {
+    .formArea .seconderyTitles {
         margin-top: 10px;
         text-align: center;
     }
 
-    .contactArea .formArea .formBox {
+    .formBox {
         display: flex;
         margin: 20px 30px;
     }
