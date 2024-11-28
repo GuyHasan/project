@@ -114,10 +114,10 @@
         {
             "websites": [
                 {
-                    "title": "Website 1",
-                    "description": "This is the first website",
-                    "url": "https://www.google.com",
-                    "image": "https://www.google.com",
+                    "title": "Pokedex",
+                    "description": "פוקדקס הוא מאגר מידע המציג את כל הפוקימונים הקיימים עם תמונות ומידע נוסף על כל פוקימון. ניתן לשמור את הפוקימונים האהובים עליכם ולצפות בהם בכל עת.",
+                    "url": "projectsExamples/websites/pokedex/index.html",
+                    "image": "images/projectsDisplayImages/websites/pokedex.jpg",
                     "tech": [
                         "html5",
                         "css3",

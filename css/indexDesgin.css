@@ -134,7 +134,6 @@ header#desktopNav nav:hover ul#DsNav {
     display: flex;
     flex-direction: column;
     padding-right: 10px;
-
 }
 
 ul#DsNav li a {
@@ -785,11 +784,27 @@ footer .social img[alt~="thumbnail"] {
     /*---------------------------------------------------------------------------------------------------------------------------------------- */
     /*------------------------------------------------------ nav header stuff---------------------------------------------------------------- */
 
-
-
     header#desktopNav {
         top: 20px;
         right: 20px;
+    }
+
+    img[src$="menuDots.svg"] {
+        height: 40px;
+    }
+
+    header#desktopNav nav:hover ul#DsNav {
+        flex-direction: row;
+        padding-right: 10px;
+        gap: 10px;
+    }
+
+    ul#DsNav li a {
+        background-color: #D8D2C2;
+        padding: 5px;
+        border-radius: 8px;
+        line-height: 2;
+        box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .2);
     }
 
     /*---------------------------------------------------------------------------------------------------------------------------------------------- */

@@ -13,6 +13,7 @@ let questions;
 let score = 0;
 let allowClick = true;
 let quizCheck = false;
+let mistakes = 0;
 
 
 //getting the questions from the api
@@ -33,12 +34,11 @@ returnButton.addEventListener('click', startAgain);
 
 
 function startGame(e) {
-    availableQuestions = [...questions.filter(question => question.correct_answer)];
+    availableQuestions = questions.filter(question => question.correct_answer && question.correct_answer.trim() !== '');
     score = 0;
     if (e.target.classList.contains('quiz')) {
         startQuiz();
-    }
-    else {
+    } else {
         chooseDifficulty();
     }
     chooseButtonsDisplay.classList.add('hide');
@@ -50,7 +50,7 @@ function startGame(e) {
 function startQuiz() {
     quizCheck = true;
     availableQuestions.sort(() => Math.random() - 0.5);
-    availableQuestions = availableQuestions.slice(0, 10);
+    availableQuestions = availableQuestions.slice(0, 15);
     getNewQuestion();
 }
 // Function to start the parctice game level selection
@@ -133,10 +133,7 @@ function displayAnswers(currentQuestion, levelSelected) {
             if (!allowClick) return; // Prevent clicking if allowClick is false
             allowClick = false; // Disable further clicks
             if (answer === currentQuestion.correct_answer) {
-                if (!quizCheck) {
-                    score++;
-                }
-                else {
+                if (quizCheck) {
                     if (currentQuestion.difficulty === 'easy') {
                         score += 3;
                     }
@@ -149,9 +146,12 @@ function displayAnswers(currentQuestion, levelSelected) {
                 }
             }
             else if (quizCheck && answer !== currentQuestion.correct_answer) {
+                mistakes++;
                 showAnswersColor(currentQuestion);
-                setTimeout(gameOver, 500);
-                return;
+                if (mistakes === 3) {
+                    setTimeout(gameOver, 500);
+                    return;
+                }
             }
             showAnswersColor(currentQuestion);
             setTimeout(() => {
@@ -177,7 +177,15 @@ function showAnswersColor(currentQuestion) {
 
 
 function updateScore() {
-    scoreDiv.innerHTML = `Score: ${score} , Question Reamin: ${availableQuestions.length}`;
+    if (localStorage.getItem('highScore') < score) {
+        localStorage.setItem('highScore', score);
+    }
+    if (quizCheck) {
+        scoreDiv.innerHTML = `Score: ${score} , Question Reamin: ${availableQuestions.length} , Mistakes Left:${3 - mistakes} <br> High Score: ${localStorage.getItem('highScore') ?? 0}`;
+    }
+    else {
+        scoreDiv.innerHTML = `Question Reamin: ${availableQuestions.length}`;
+    }
 }
 
 function gameOver() {
@@ -201,7 +209,7 @@ function startAgain() {
     document.querySelector('.question').innerHTML = '';
     answersDiv.innerHTML = '';
     scoreDiv.innerHTML = '';
-    timeRemaining = 60;
+    mistakes = 0;
     gameBox.classList.add('hide');
     returnButton.classList.add('hide');
     allowClick = true;

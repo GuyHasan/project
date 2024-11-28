@@ -16,7 +16,8 @@ let projectsData;
 
 async function fetchProjectsData() {
     try {
-        const response = await fetch('/project/script/projects.json');
+        const response = await fetch('/project/script/projects.json'); //fetch that works with github pages
+        // const response = await fetch('../script/projects.json'); //fetch that works with local server
         projectsData = await response.json();
         console.log(projectsData);
     }
@@ -37,13 +38,13 @@ class ProjectCard {
         projectCard.classList.add('projectexample');
         projectCard.innerHTML = `
                     <img src="${project.image}" alt="דוגמה לפרויקט">
-                    <div class="projectsInfo">
+                    <div class="projectsinfo">
                         <h3>${project.title}</h3>
                         <p>${project.description}</p>
                         <div class="techUsed">
                             ${this.projectTechDisplay(project)}
-                        </div>
-                        <div class="projbutton normalText"><a href="${project.url}">למעבר לפרויקט</a></div>
+                    </div>
+                    <div class="projbutton normalText"><a href="${project.url}">למעבר לפרויקט</a></div>
         `;
         return projectCard;
     }
