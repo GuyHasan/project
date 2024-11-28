@@ -16,7 +16,7 @@ let projectsData;
 
 async function fetchProjectsData() {
     try {
-        const response = await fetch('/script/projects.json');
+        const response = await fetch('../script/projects.json');
         projectsData = await response.json();
         console.log(projectsData);
     }
