@@ -116,7 +116,7 @@
                 {
                     "title": "Pokedex",
                     "description": "פוקדקס הוא מאגר מידע המציג את כל הפוקימונים הקיימים עם תמונות ומידע נוסף על כל פוקימון. ניתן לשמור את הפוקימונים האהובים עליכם ולצפות בהם בכל עת.",
-                    "url": "projectsExamples/websites/pokedex/index.html",
+                    "url": "projectsExamples/websites/Pokedex/index.html",
                     "image": "images/projectsDisplayImages/websites/pokedex.jpg",
                     "tech": [
                         "html5",
