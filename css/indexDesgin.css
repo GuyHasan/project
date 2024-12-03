@@ -24,6 +24,7 @@ html {
 }
 
 body {
+    position: relative;
     font-family: rubik;
     color: #272727;
 }
@@ -520,6 +521,47 @@ img[src^="projectsImg/"] {
     text-align: center;
 }
 
+.inputWrap {
+    position: relative;
+}
+
+.error {
+    position: absolute;
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 0.875rem;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.popUpMessage {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #d1ecf155;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+}
+
+.successMessageBox {
+    font-size: clamp(1.25rem, 0.893vw + 0.929rem, 2rem);
+    font-weight: 500;
+    background-color: #D8D2C2;
+    color: #272727;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 /*--------------------------------------------------------- FormStructure stuff----------------------------------------------------------------- */
 .formBox {
@@ -676,6 +718,11 @@ footer .social img[alt~="thumbnail"] {
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
 /*---------------------------------------------------------------------------------------------------------------------------------------------- */
+@media (max-width:1640px) {
+    .error {
+        white-space: normal;
+    }
+}
 
 @media (max-width: 1200px) {
     .aboutme {
@@ -933,6 +980,25 @@ footer .social img[alt~="thumbnail"] {
     .formBox {
         display: flex;
         margin: 20px 30px;
+    }
+
+    .formBox form {
+        display: grid;
+        grid-template-areas:
+            'fullnameLabel fullnameLabel'
+            'fullnameInput fullnameInput'
+            'phonenumberLabel phonenumberLabel'
+            'phonenumberInput phonenumberInput'
+            'emailLabel emailLabel'
+            'emailInput emailInput'
+            'textareaLabel textareaLabel'
+            'textareaInput textareaInput'
+            'formButton formButton'
+        ;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(9, auto);
+        column-gap: 10px;
+        row-gap: 5px;
     }
 
 

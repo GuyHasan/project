@@ -93,21 +93,29 @@
                 <h3>השארת פרטים</h3>
             </div>
             <div class="formBox">
-                <form>
+                <form id="contactForm">
 
                     <label class="normalText fullnameLabel" for="fullname">שם מלא</label>
-                    <input type="text" id="fullname" class="fullnameInput" placeholder="גם פרטי זה בסדר" required>
+                    <div class="inputWrap fullnameInput">
+                        <input type="text" id="fullname" placeholder="גם פרטי זה בסדר">
+                    </div>
 
                     <label class="normalText phonenumberLabel" for="phonenumber">טלפון</label>
-                    <input type="tel" id="phonenumber" class="phonenumberInput" placeholder="050-5555555" required>
+                    <div class="inputWrap phonenumberInput">
+                        <input type="tel" id="phonenumber" placeholder="050-5555555">
+                    </div>
 
                     <label class="normalText emailLabel" for="email">אימייל</label required>
-                    <input type="email" id="email" class="emailInput" placeholder="youremail@gmail.com" required>
+                    <div class="inputWrap emailInput">
+                        <input type="email" id="email" placeholder="youremail@gmail.com">
+                    </div>
 
-                    <label class="normalText textareaLabel" for="messege">הודעה</label>
-                    <textarea id="messege" class="textareaInput" placeholder="אני מתעניין בנוגע ל..."></textarea>
+                    <label class="normalText textareaLabel" for="message">הודעה</label>
+                    <div class="inputWrap textareaInput">
+                        <textarea id="message" placeholder="אני מתעניין בנוגע ל..."></textarea>
+                    </div>
 
-                    <input class="normalText formButton" type="submit" value="שליחה">
+                    <input class="normalText formButton" id="submitbutton" type="submit" value="שליחה">
 
                 </form>
             </div>

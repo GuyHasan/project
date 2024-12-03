@@ -9,9 +9,16 @@ const landingPagesButton = document.querySelector('.landingPagesButton');
 const gamesButton = document.querySelector('.gamesButton');
 const websitesButton = document.querySelector('.websitesButton');
 const returnButton = document.querySelector('.returnButton');
-//
+// data for the projects
 let projectsData;
 
+//form inputs
+const fullName = document.getElementById('fullname');
+const phone = document.getElementById('phonenumber');
+const email = document.getElementById('email');
+const message = document.getElementById('message');
+const submitButton = document.getElementById('submitbutton');
+const contactForm = document.getElementById('contactForm');
 
 
 async function fetchProjectsData() {
@@ -98,3 +105,75 @@ returnButton.addEventListener('click', () => {
     projectsDisplay.style.display = 'none';
     boxSelectors.style.display = 'flex';
 });
+
+
+//form validation
+submitButton.addEventListener('click', formValidation);
+
+function formValidation(e) {
+    e.preventDefault();
+    let isValid = true;
+    clearErrors();
+
+    if (fullName.value.trim() === '') {
+        showError(fullName, 'שם מלא הינו שדה חובה');
+        isValid = false;
+    }
+    const phonePattern = /^[0-9]{10}$/;
+    if (!phonePattern.test(phone.value.trim())) {
+        showError(phone, 'מספר טלפון חייב להכיל 10 ספרות');
+        isValid = false;
+    }
+
+    // Validate email
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email.value.trim())) {
+        showError(email, 'אימייל אינו תקין');
+        isValid = false;
+    }
+
+    // Validate message
+    if (message.value.trim() === '') {
+        showError(message, 'הודעה היא שדה חובה');
+        isValid = false;
+    }
+
+    if (isValid) {
+        messageSuccess();
+        contactForm.reset(); // until i will add the server side
+    }
+}
+
+// Function to show error messages
+function showError(input, message) {
+    const errorElement = document.createElement('div');
+    errorElement.classList.add('error');
+    errorElement.innerText = message;
+
+    // Position the error message above the input field
+    errorElement.style.bottom = '100%'; // Position above the input field
+    errorElement.style.left = '0';
+    errorElement.style.transform = 'translateY(-10px)'; // Adjust the position
+    errorElement.style.marginBottom = '5px'; // Space between input and error
+
+    input.parentElement.appendChild(errorElement);
+}
+
+// Function to clear previous error messages
+function clearErrors() {
+    const errorElements = document.querySelectorAll('.error');
+    errorElements.forEach(element => element.remove());
+}
+
+function messageSuccess() {
+    const popUpMessage = document.createElement('div');
+    popUpMessage.classList.add('popUpMessage');
+    const successMessageBox = document.createElement('div');
+    successMessageBox.classList.add('successMessageBox');
+    successMessageBox.innerText = 'ההודעה נשלחה בהצלחה';
+    document.body.appendChild(popUpMessage);
+    popUpMessage.appendChild(successMessageBox);
+    setTimeout(() => {
+        popUpMessage.remove();
+    }, 1500);
+}
