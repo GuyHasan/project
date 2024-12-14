@@ -12,12 +12,33 @@
 <body>
     <div class="wrap background">
         <h1 class="title">Welcome to Your Personal Pokedex</h1>
+        <button class="startingButton">Start</button>
+        <!-- Pokedex -->
         <div class="pokedexBox">
+            <!-- Home -->
+            <div class="pokedexHome">
+                <div class="trainerInfo screen">
+                    <img src="" alt="Avatar" class="trainerAvatar"/>
+                    <div class="trainerInfoRow">
+                        <div class="trainerName"></div>
+                        <img src="" alt="gender icon" class="trainerGender"/>
+                    </div>
+                    <div class="trainerAge"></div>
+                </div>
+                <p class="welcomeText">
+                Welcome to your Personal Pokedex. 
+                Here you can search and view all the Pokemons, add them to your favorites and view them later.
+                Click the buttons below to start.
+            </p>
+                <button class="viewPokemonsButton button">Search and View All The Pokemons, Add Yours to Favorites!</button>
+                <button class="yourPokemonsButton button">View Your Pokemons</button>
+            </div>
+            <!-- Data View -->
             <div class="pokemonDataView">
                 <div class="screen">
                     <div class="markTab">
-                        <img src="images/pokeball.svg" alt="" class="caught">
-                        <p>Caught</p>
+                        <img src="images/pokeball.svg" alt="" class="caught"/>
+                        <p>Add Own</p>
                     </div>
                     <div class="pokemonId"></div>
                     <div class="pokemonName"></div>
@@ -40,11 +61,84 @@
                     <button class="prevButton button">Previous</button>
                     <button class="nextButton button">Next</button>
                     <button class="myPokemonsButton button">My Pokemons</button>
+                    <button class="homeButton button">Home</button>
                 </div>
             </div>
+            <!-- Favorite View -->
             <div class="myPokemonsDisplay">
-                <button class="backToPokedex">Back To The Pokedex</button>
+                <div class="buttonsRow">
+                    <button class="backToPokedex button">Back To The Pokedex</button>
+                    <button class="homeButton button">Home</button>
+                </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Login -->
+    <div class="loginPopUp popUp">
+        <div class="popUpBox">
+            <h2>Enter Your Info</h2>
+            <div class="inputWrap">
+                <input type="text" class="trainerNameInput" placeholder="Enter Your Name">
+            </div>
+            <div class="inputWrap">
+                <input type="number" min="5" max="99" class="trainerAgeInput" placeholder="Enter Your Age">
+            </div>
+            <h4>Are you a Boy/Girl?</h4>
+            <div class="genderDiv">
+                <input type="radio" class="gender" name="gender" value="boy" id="boy" checked>
+                <label for="boy">Boy</label>
+            </div>
+            <div class="genderDiv">
+                <input type="radio" class="gender" name="gender" value="girl" id="girl">
+                <label for="girl">Girl</label>
+            </div>
+            <button class="loginButton">Let's Go</button>
+        </div>
+    </div>
+
+    <!-- Add pokemon -->
+    <div class="yourPokePopUp popUp">
+        <div class="popUpBox">
+            <h2>Enter Your Pokemon</h2>
+            <label for="">Enter your pokemon nickname</label>
+            <div class="inputWrap">
+                <input type="text" class="pokemonNameInput" placeholder="Can be Empty"/>
+            </div>
+            <label for="">Enter your pokemon level</label>
+            <div class="inputWrap">
+                <input type="number" class="pokemonLevelInput" placeholder="5-99" min="5" max="99"/>
+            </div>
+            <label for="nature">Choose your pokemon nature</label>
+            <select name="natures" id="natures" class="pokemonNatureInput">
+                <option value="Adamant">Adamant</option>
+                <option value="Bashful">Bashful</option>
+                <option value="Bold">Bold</option>
+                <option value="Brave">Brave</option>
+                <option value="Calm">Calm</option>
+                <option value="Careful">Careful</option>
+                <option value="Docile">Docile</option>
+                <option value="Gentle">Gentle</option>
+                <option value="Hardy">Hardy</option>
+                <option value="Hasty">Hasty</option>
+                <option value="Impish">Impish</option>
+                <option value="Jolly">Jolly</option>
+                <option value="Lax">Lax</option>
+                <option value="Lonely">Lonely</option>
+                <option value="Mild">Mild</option>
+                <option value="Modest">Modest</option>
+                <option value="Naive">Naive</option>
+                <option value="Naughty">Naughty</option>
+                <option value="Quirky">Quirky</option>
+                <option value="Quiet">Quiet</option>
+                <option value="Rash">Rash</option>
+                <option value="Relaxed">Relaxed</option>
+                <option value="Sassy">Sassy</option>
+                <option value="Serious">Serious</option>
+                <option value="Timid">Timid</option>
+            </select>
+            <button class="addPokemon">Add Pokemon</button>
+            <button class="updatePokemonButton">Update Pokemon</button>
         </div>
     </div>
 </body>
