@@ -72,8 +72,8 @@
 				{
 					"title": "Game 3",
 					"description": "This is the third game",
-					"url": "https://www.google.com",
-					"image": "https://www.google.com",
+					"url": "",
+					"image": "",
 					"tech": ["html5", "css3", "javaScript"]
 				}
 			]
@@ -97,8 +97,8 @@
 				{
 					"title": "Website 3",
 					"description": "This is the third website",
-					"url": "https://www.google.com",
-					"image": "https://www.google.com",
+					"url": "",
+					"image": "",
 					"tech": ["html5", "css3", "javaScript"]
 				}
 			]

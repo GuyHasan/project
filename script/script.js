@@ -23,8 +23,8 @@ const contactForm = document.getElementById("contactForm");
 
 async function fetchProjectsData() {
 	try {
-		//const response = await fetch("/project/script/projects.json"); //fetch that works with github pages
-		const response = await fetch("../script/projects.json"); //fetch that works with local server
+		const response = await fetch("/project/script/projects.json"); //fetch that works with github pages
+		//const response = await fetch("../script/projects.json"); //fetch that works with local server
 		projectsData = await response.json();
 	} catch (error) {
 		console.error("Error:", error);

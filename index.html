@@ -1,168 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Guy Hasan</title>
+		<link rel="stylesheet" href="css/indexDesgin.css" />
+		<link rel="stylesheet" href="css/projectsPagesDesign.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+		<script src="script/script.js" defer></script>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guy Hasan</title>
-    <link rel="stylesheet" href="css/indexDesgin.css">
-    <link rel="stylesheet" href="css/projectsPagesDesign.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet">
-    <script src="script/script.js" defer></script>
-</head>
-
-<body>
-<div class="mainPage">
-    <!-------------------------------------------------------------------------------------------------------------------------------------------->
-    <!-------------------------------------------------------- Desktop menu ---------------------------------------------------------------------->
-    <header id="desktopNav">
-        <nav>
-            <img src="images/svg/menuDots.svg" alt="Menu Icon">
-            <ul id="DsNav">
-                <li><a href="#hero" class="seconderyTitles">ראשי</a></li>
-                <li><a href="#about" class="seconderyTitles">עליי</a></li>
-                <li><a href="#projects" class="seconderyTitles">פרויקטים</a></li>
-                <li><a href="#contact" class="seconderyTitles">ליצירת קשר</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-------------------------------------------------------------------------------------------------------------------------------------------->
-    <!---------------------------------------------------------- Main Area ----------------------------------------------------------------------->
-    <div class="mainarea firstBackground">
-        <div class="anchorRef" id="hero"></div>
-        <p class="seconderyTitles">Hey,</p>
-        <h1 class="headTitles">I'm Guy Hasan</h1>
-        <p class="seconderyTitles">A Full-Stack Developer, And You Are Currently at My Protfolio Page, Or As I Like To
-            Call Him, The <span class="awesome">"I'M AWESOME"</span> Page. Enjoy Viewing Around.</p>
-    </div>
-    <!-------------------------------------------------------------------------------------------------------------------------------------------->
-    <!-------------------------------------------------------- About Area ------------------------------------------------------------------------>
-    <div class="aboutme seconderyBackground">
-        <div class="anchorRef" id="about"></div>
-        <img src="images/svg/iconProfile.svg" alt="profile icon">
-        <h2 class="seconderyTitles">קצת עליי</h2>
-        <p>אני גיא, בן 23 מחולון. בעברי הנדסאי אלקטרוניקה ששינה כיוון. בין היתר בזמני הפנוי
-            אוהב לעשות הרבה דברים באנלים, כמו לשמוע מוזיקה ממטאל כבד ועד לראפ ישראלי, לצפות בסדרות וסרטים, גיימינג וגם
-            להתאמן בחדר כושר ולשחק כדורסל. וכמו בזמני הפנוי, גם בקוד- משלב הכל בהרמוניה ובעבודה קשה.</p>
-        <button class="resumeBtn"><a href="">קורות חיים יתווספו בהמשך</a></button>
-        <img src="images/svg/gaming.svg" alt="">
-        <img src="images/svg/basketball.svg" alt="" class="hobbies">
-        <img src="images/svg/movies.svg" alt="" class="hobbies">
-        <img src="images/svg/headphones.svg" alt="" class="hobbies">
-        <img src="images/svg/dumbbell.svg" alt="" class="hobbies">
-    </div>
-    <!-------------------------------------------------------------------------------------------------------------------------------------------->
-    <!-------------------------------------------------------- Project Area ---------------------------------------------------------------------->
-    <div class="myprojects firstBackground">
-        <div class="anchorRef" id="projects"></div>
-        <div class="projTextArea">
-            <h2 class="headTitles">הפרויקטים שלי</h2>
-            <p class="seconderyTitles">
-                אומרים שתמונה שווה אלף מילים, אז נחסוך במילים - ניתן לראות מספר דוגמאות לפרויקטים , בהתאם למה
-                שמעניין אתכם .
-            </p>
-        </div>
-        <div class="boxSelectors">
-            <button class="boxButton thirdBackground">עמודי נחיתה</button>
-            <button class="boxButton thirdBackground">משחקים</button>
-            <button class="boxButton thirdBackground">אתרים</button>
-        </div>
-        <div class="projectsDisplay">
-            <div class="selectorsRow">
-                <div class="selectorButton firstBackground"><img src="images/svg/return.svg" class="returnButton"
-                        alt=""></div>
-                <button class="landingPagesButton selectorButton normalText firstBackground">עמודי נחיתה</button>
-                <button class="gamesButton selectorButton normalText firstBackground">משחקים</button>
-                <button class="websitesButton selectorButton normalText firstBackground">אתרים</button>
-            </div>
-            <div class="projectDivCleaner"></div>
-        </div>
-    </div>
-    <!-------------------------------------------------------------------------------------------------------------------------------------------->
-    <!-------------------------------------------------------- Contact Area ---------------------------------------------------------------------->
-    <div class="contactArea seconderyBackground">
-        <div class="anchorRef" id="contact"></div>
-        <div class="contactAreainfo">
-            <h2 class="headTitles">איך ממשיכים מכאן?</h2>
-            <p class="normalText">ניתן להשאיר פרטים בנוגע למה שמעניין אתכם וכיצד ניתן להשיג אתכם בהתאם להעדפות שלכם,
-                ואצור קשר בהקדם האפשרי!</p>
-        </div>
-        <div class="formArea">
-            <div class="seconderyTitles">
-                <h3>השארת פרטים</h3>
-            </div>
-            <div class="formBox">
-                <form id="contactForm">
-
-                    <label class="normalText fullnameLabel" for="fullname">שם מלא</label>
-                    <div class="inputWrap fullnameInput">
-                        <input type="text" id="fullname" placeholder="גם פרטי זה בסדר">
-                    </div>
-
-                    <label class="normalText phonenumberLabel" for="phonenumber">טלפון</label>
-                    <div class="inputWrap phonenumberInput">
-                        <input type="tel" id="phonenumber" placeholder="050-5555555">
-                    </div>
-
-                    <label class="normalText emailLabel" for="email">אימייל</label required>
-                    <div class="inputWrap emailInput">
-                        <input type="email" id="email" placeholder="youremail@gmail.com">
-                    </div>
-
-                    <label class="normalText textareaLabel" for="message">הודעה</label>
-                    <div class="inputWrap textareaInput">
-                        <textarea id="message" placeholder="אני מתעניין בנוגע ל..."></textarea>
-                    </div>
-
-                    <input class="normalText formButton" id="submitbutton" type="submit" value="שליחה">
-
-                </form>
-            </div>
-        </div>
-    </div>
-    <!-------------------------------------------------------------------------------------------------------------------------------------------->
-    <!--------------------------------------------------------- Footer Area ---------------------------------------------------------------------->
-    <footer class="firstBackground mainPageFooter">
-        <h3 class="seconderyTitles">Guy Hasan</h3>
-        <div class="social">
-            <img src="images/svg/linkedin.svg" alt="linkedin link thumbnail">
-            <a href="https://github.com/GuyHasan" target="_blank"><img src="images/svg/github.svg"
-                    alt="github link thumbnail"></a>
-            <a href="https://wa.me/972528831021" target="_blank"><img src="images/svg/whatsapp.svg"
-                    alt="whatsapp link thumbnail"></a>
-        </div>
-    </footer>
-</div>
-
-
-<!-------------------------------------------------------------------------------------------------------------------------------------------->
-<!-------------------------------------------------------- DisplayPage ---------------------------------------------------------------------->
-<div class="displayPage">
-		<header class="displayPageHeader firstBackground">
-			<img src="../../images/svg/iconProfile.svg" alt="icon logo" />
-			<h3 class="seconderyTitles backToMainButton">Guy Hasan</h3>
-		</header>
-		<div class="mainAreaDisplayPage firstBackground">
-			<h1 class="headTitles displayPageTitle"></h1>
-			<p class="normalText displayPageDescription"></p>
-			<div class="buttonsDisplayPage">
-				<div class="clickbutton"><a class="showProject" href="" target="_blank">לצפייה בפרויקט</a></div>
-				<div class="clickbutton"><a class="downloadProject" href="" download="">להורדת הפרויקט</a></div>
+	<body>
+		<div class="mainPage">
+			<!-------------------------------------------------------------------------------------------------------------------------------------------->
+			<!-------------------------------------------------------- Desktop menu ---------------------------------------------------------------------->
+			<header id="desktopNav">
+				<nav>
+					<img src="images/svg/menuDots.svg" alt="Menu Icon" />
+					<ul id="DsNav">
+						<li><a href="#hero" class="seconderyTitles">ראשי</a></li>
+						<li><a href="#about" class="seconderyTitles">עליי</a></li>
+						<li><a href="#projects" class="seconderyTitles">פרויקטים</a></li>
+						<li><a href="#contact" class="seconderyTitles">ליצירת קשר</a></li>
+					</ul>
+				</nav>
+			</header>
+			<!-------------------------------------------------------------------------------------------------------------------------------------------->
+			<!---------------------------------------------------------- Main Area ----------------------------------------------------------------------->
+			<div class="mainarea firstBackground">
+				<div class="anchorRef" id="hero"></div>
+				<p class="seconderyTitles">Hey,</p>
+				<h1 class="headTitles">I'm Guy Hasan</h1>
+				<p class="seconderyTitles">A Full-Stack Developer, And You Are Currently at My Protfolio Page, Or As I Like To Call Him, The <span class="awesome">"I'M AWESOME"</span> Page. Enjoy Viewing Around.</p>
 			</div>
-		</div>
-		<div class="displayPageTech">
-		</div>
-		<div class="projectexampleDisplayPage seconderyBackground">
-			<img src="" alt="" class="displayPageImage" />
-		</div>
-		<footer class="firstBackground displayPageFooter">
-			<h3 class="normalText">Guy Hasan</h3>
-			<p class="normalText">כל הזכויות שמורות</p>
-		</footer>
-</div>
-</body>
+			<!-------------------------------------------------------------------------------------------------------------------------------------------->
+			<!-------------------------------------------------------- About Area ------------------------------------------------------------------------>
+			<div class="aboutme seconderyBackground">
+				<div class="anchorRef" id="about"></div>
+				<img src="images/svg/iconProfile.svg" alt="profile icon" />
+				<h2 class="seconderyTitles">קצת עליי</h2>
+				<p>
+					אני גיא, בן 23 מחולון. בעברי הנדסאי אלקטרוניקה ששינה כיוון. בין היתר בזמני הפנוי אוהב לעשות הרבה דברים באנלים, כמו לשמוע מוזיקה ממטאל כבד ועד לראפ ישראלי, לצפות בסדרות וסרטים, גיימינג וגם להתאמן בחדר כושר ולשחק כדורסל. וכמו בזמני
+					הפנוי, גם בקוד- משלב הכל בהרמוניה ובעבודה קשה.
+				</p>
+				<button class="resumeBtn"><a href="">קורות חיים יתווספו בהמשך</a></button>
+				<img src="images/svg/gaming.svg" alt="" />
+				<img src="images/svg/basketball.svg" alt="" class="hobbies" />
+				<img src="images/svg/movies.svg" alt="" class="hobbies" />
+				<img src="images/svg/headphones.svg" alt="" class="hobbies" />
+				<img src="images/svg/dumbbell.svg" alt="" class="hobbies" />
+			</div>
+			<!-------------------------------------------------------------------------------------------------------------------------------------------->
+			<!-------------------------------------------------------- Project Area ---------------------------------------------------------------------->
+			<div class="myprojects firstBackground">
+				<div class="anchorRef" id="projects"></div>
+				<div class="projTextArea">
+					<h2 class="headTitles">הפרויקטים שלי</h2>
+					<p class="seconderyTitles">אומרים שתמונה שווה אלף מילים, אז נחסוך במילים - ניתן לראות מספר דוגמאות לפרויקטים , בהתאם למה שמעניין אתכם .</p>
+				</div>
+				<div class="boxSelectors">
+					<button class="boxButton thirdBackground">עמודי נחיתה</button>
+					<button class="boxButton thirdBackground">משחקים</button>
+					<button class="boxButton thirdBackground">אתרים</button>
+				</div>
+				<div class="projectsDisplay">
+					<div class="selectorsRow">
+						<div class="selectorButton firstBackground"><img src="images/svg/return.svg" class="returnButton" alt="" /></div>
+						<button class="landingPagesButton selectorButton normalText firstBackground">עמודי נחיתה</button>
+						<button class="gamesButton selectorButton normalText firstBackground">משחקים</button>
+						<button class="websitesButton selectorButton normalText firstBackground">אתרים</button>
+					</div>
+					<div class="projectDivCleaner"></div>
+				</div>
+			</div>
+			<!-------------------------------------------------------------------------------------------------------------------------------------------->
+			<!-------------------------------------------------------- Contact Area ---------------------------------------------------------------------->
+			<div class="contactArea seconderyBackground">
+				<div class="anchorRef" id="contact"></div>
+				<div class="contactAreainfo">
+					<h2 class="headTitles">איך ממשיכים מכאן?</h2>
+					<p class="normalText">ניתן להשאיר פרטים בנוגע למה שמעניין אתכם וכיצד ניתן להשיג אתכם בהתאם להעדפות שלכם, ואצור קשר בהקדם האפשרי!</p>
+				</div>
+				<div class="formArea">
+					<div class="seconderyTitles">
+						<h3>השארת פרטים</h3>
+					</div>
+					<div class="formBox">
+						<form id="contactForm">
+							<label class="normalText fullnameLabel" for="fullname">שם מלא</label>
+							<div class="inputWrap fullnameInput">
+								<input type="text" id="fullname" placeholder="גם פרטי זה בסדר" />
+							</div>
 
+							<label class="normalText phonenumberLabel" for="phonenumber">טלפון</label>
+							<div class="inputWrap phonenumberInput">
+								<input type="tel" id="phonenumber" placeholder="050-5555555" />
+							</div>
+
+							<label class="normalText emailLabel" for="email">אימייל</label>
+							<div class="inputWrap emailInput">
+								<input type="email" id="email" placeholder="youremail@gmail.com" />
+							</div>
+
+							<label class="normalText textareaLabel" for="message">הודעה</label>
+							<div class="inputWrap textareaInput">
+								<textarea id="message" placeholder="אני מתעניין בנוגע ל..."></textarea>
+							</div>
+
+							<input class="normalText formButton" id="submitbutton" type="submit" value="שליחה" />
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-------------------------------------------------------------------------------------------------------------------------------------------->
+			<!--------------------------------------------------------- Footer Area ---------------------------------------------------------------------->
+			<footer class="firstBackground mainPageFooter">
+				<h3 class="seconderyTitles">Guy Hasan</h3>
+				<div class="social">
+					<img src="images/svg/linkedin.svg" alt="linkedin link thumbnail" />
+					<a href="https://github.com/GuyHasan" target="_blank"><img src="images/svg/github.svg" alt="github link thumbnail" /></a>
+					<a href="https://wa.me/972528831021" target="_blank"><img src="images/svg/whatsapp.svg" alt="whatsapp link thumbnail" /></a>
+				</div>
+			</footer>
+		</div>
+
+		<!-------------------------------------------------------------------------------------------------------------------------------------------->
+		<!-------------------------------------------------------- DisplayPage ---------------------------------------------------------------------->
+		<div class="displayPage">
+			<header class="displayPageHeader firstBackground">
+				<img src="../../images/svg/iconProfile.svg" alt="icon logo" />
+				<h3 class="seconderyTitles backToMainButton">Guy Hasan</h3>
+			</header>
+			<div class="mainAreaDisplayPage firstBackground">
+				<h1 class="headTitles displayPageTitle"></h1>
+				<p class="normalText displayPageDescription"></p>
+				<div class="buttonsDisplayPage">
+					<div class="clickbutton"><a class="showProject" href="" target="_blank">לצפייה בפרויקט</a></div>
+					<div class="clickbutton"><a class="downloadProject" href="" download="">להורדת הפרויקט</a></div>
+				</div>
+			</div>
+			<div class="displayPageTech"></div>
+			<div class="projectexampleDisplayPage seconderyBackground">
+				<img src="" alt="" class="displayPageImage" />
+			</div>
+			<footer class="firstBackground displayPageFooter">
+				<h3 class="normalText">Guy Hasan</h3>
+				<p class="normalText">כל הזכויות שמורות</p>
+			</footer>
+		</div>
+	</body>
 </html>
