@@ -1,152 +1,107 @@
 {
-    "projects": [
-        {
-            "landingPages": [
-                {
-                    "title": "ייעוץ עתיד",
-                    "description": "זוהי דוגמה לעמוד נחיתה בעל רקע מחולק וטופס במרכזו ליצור משיכת עין.",
-                    "url": "projectsExamples/landingPages/landingPage1/displayPage.html",
-                    "image": "images/projectsDisplayImages/landingPages/landingPage1.jpg",
-                    "tech": [
-                        "html5",
-                        "css3"
-                    ]
-                },
-                {
-                    "title": "Here & Now",
-                    "description": "זוהי דוגמה לעמוד נחיתה בסגנון הזמנה, שכל העמוד מתפקד כטופס שליחת פרטים גדול.",
-                    "url": "projectsExamples/landingPages/landingPage2/displayPage.html",
-                    "image": "images/projectsDisplayImages/landingPages/landingPage2.jpg",
-                    "tech": [
-                        "html5",
-                        "css3"
-                    ]
-                },
-                {
-                    "title": "קפה רינה",
-                    "description": "זוהי דוגמה לעמוד נחיתה שנותן דגש למוצר העסק לדוגמה קפה הדגל של בית הקפה.",
-                    "url": "projectsExamples/landingPages/landingPage3/displayPage.html",
-                    "image": "images/projectsDisplayImages/landingPages/landingPage3.jpg",
-                    "tech": [
-                        "html5",
-                        "css3"
-                    ]
-                },
-                {
-                    "title": "אקדמאי לכולם",
-                    "description": "זוהי דוגמה לעמוד נחיתה בצורת חץ המצביע לטופס השארת פרטים.",
-                    "url": "projectsExamples/landingPages/landingPage4/displayPage.html",
-                    "image": "images/projectsDisplayImages/landingPages/landingPage4.jpg",
-                    "tech": [
-                        "html5",
-                        "css3"
-                    ]
-                },
-                {
-                    "title": "סובב עולם",
-                    "description": "זוהי דוגמה לעמוד נחיתה שבנוי בצורת גלרייה שמורכבת מתמונות, מידע ומקום ליצירת קשר.",
-                    "url": "projectsExamples/landingPages/landingPage5/displayPage.html",
-                    "image": "images/projectsDisplayImages/landingPages/landingPage5.jpg",
-                    "tech": [
-                        "html5",
-                        "css3"
-                    ]
-                },
-                {
-                    "title": "קידום צעיר",
-                    "description": "זוהי דוגמה לעמוד נחיתה עם דגש על השארת פרטים ויצירת קשר גם דרך רשתות חברתיות בנוסף באמצעות סמלילים שלהם.",
-                    "url": "projectsExamples/landingPages/landingPage6/displayPage.html",
-                    "image": "images/projectsDisplayImages/landingPages/landingPage6.jpg",
-                    "tech": [
-                        "html5",
-                        "css3"
-                    ]
-                },
-                {
-                    "title": "לחשוב מחוץ לקופסא",
-                    "description": "זוהי דוגמה לעמוד נחיתה שמשלב מספר אלמנטים כמו הטמעת מפה לטובת מיקום עסק, לינקים לרשתות חברתיות, יצירת קשר.",
-                    "url": "projectsExamples/landingPages/landingPage7/displayPage.html",
-                    "image": "images/projectsDisplayImages/landingPages/landingPage7.jpg",
-                    "tech": [
-                        "html5",
-                        "css3"
-                    ]
-                }
-            ]
-        },
-        {
-            "games": [
-                {
-                    "title": "Meomory Game",
-                    "description": "משחק הזיכרון המוכר בגרסה מעוצבת ומעודכנת. מצאו את הזוגות המתאימים ובדקו את כישורי הזיכרון שלכם.",
-                    "url": "projectsExamples/games/memoryGame/index.html",
-                    "image": "images/projectsDisplayImages/games/memoryGame.jpg",
-                    "tech": [
-                        "html5",
-                        "css3",
-                        "javaScript"
-                    ]
-                },
-                {
-                    "title": "Trivia Game",
-                    "description": "שחקו במבחן הטירוויה האולטימטיבי, בחנו את הידע הכללי שלכם והשוו את התוצאות עם חבריכם.",
-                    "url": "projectsExamples/games/triviaGame/index.html",
-                    "image": "images/projectsDisplayImages/games/triviaGame.jpg",
-                    "tech": [
-                        "html5",
-                        "css3",
-                        "javaScript"
-                    ]
-                },
-                {
-                    "title": "Game 3",
-                    "description": "This is the third game",
-                    "url": "https://www.google.com",
-                    "image": "https://www.google.com",
-                    "tech": [
-                        "html5",
-                        "css3",
-                        "javaScript"
-                    ]
-                }
-            ]
-        },
-        {
-            "websites": [
-                {
-                    "title": "Pokedex",
-                    "description": "פוקדקס הוא מאגר מידע המציג את כל הפוקימונים הקיימים עם תמונות ומידע נוסף על כל פוקימון. ניתן לשמור את הפוקימונים האהובים עליכם ולצפות בהם בכל עת.",
-                    "url": "projectsExamples/websites/Pokedex/index.html",
-                    "image": "images/projectsDisplayImages/websites/pokedex.jpg",
-                    "tech": [
-                        "html5",
-                        "css3",
-                        "javaScript"
-                    ]
-                },
-                {
-                    "title": "Website 2",
-                    "description": "This is the second website",
-                    "url": "https://www.google.com",
-                    "image": "https://www.google.com",
-                    "tech": [
-                        "html5",
-                        "css3",
-                        "javaScript"
-                    ]
-                },
-                {
-                    "title": "Website 3",
-                    "description": "This is the third website",
-                    "url": "https://www.google.com",
-                    "image": "https://www.google.com",
-                    "tech": [
-                        "html5",
-                        "css3",
-                        "javaScript"
-                    ]
-                }
-            ]
-        }
-    ]
+	"projects": [
+		{
+			"landingPages": [
+				{
+					"title": "ייעוץ עתיד",
+					"description": "זוהי דוגמה לעמוד נחיתה בעל רקע מחולק וטופס במרכזו ליצור משיכת עין.",
+					"url": "projectsExamples/landingPages/landingPage1/displayPage.html",
+					"image": "images/projectsDisplayImages/landingPages/landingPage1.jpg",
+					"tech": ["html5", "css3"]
+				},
+				{
+					"title": "Here & Now",
+					"description": "זוהי דוגמה לעמוד נחיתה בסגנון הזמנה, שכל העמוד מתפקד כטופס שליחת פרטים גדול.",
+					"url": "projectsExamples/landingPages/landingPage2/displayPage.html",
+					"image": "images/projectsDisplayImages/landingPages/landingPage2.jpg",
+					"tech": ["html5", "css3"]
+				},
+				{
+					"title": "קפה רינה",
+					"description": "זוהי דוגמה לעמוד נחיתה שנותן דגש למוצר העסק לדוגמה קפה הדגל של בית הקפה.",
+					"url": "projectsExamples/landingPages/landingPage3/displayPage.html",
+					"image": "images/projectsDisplayImages/landingPages/landingPage3.jpg",
+					"tech": ["html5", "css3"]
+				},
+				{
+					"title": "אקדמאי לכולם",
+					"description": "זוהי דוגמה לעמוד נחיתה בצורת חץ המצביע לטופס השארת פרטים.",
+					"url": "projectsExamples/landingPages/landingPage4/displayPage.html",
+					"image": "images/projectsDisplayImages/landingPages/landingPage4.jpg",
+					"tech": ["html5", "css3"]
+				},
+				{
+					"title": "סובב עולם",
+					"description": "זוהי דוגמה לעמוד נחיתה שבנוי בצורת גלרייה שמורכבת מתמונות, מידע ומקום ליצירת קשר.",
+					"url": "projectsExamples/landingPages/landingPage5/displayPage.html",
+					"image": "images/projectsDisplayImages/landingPages/landingPage5.jpg",
+					"tech": ["html5", "css3"]
+				},
+				{
+					"title": "קידום צעיר",
+					"description": "זוהי דוגמה לעמוד נחיתה עם דגש על השארת פרטים ויצירת קשר גם דרך רשתות חברתיות בנוסף באמצעות סמלילים שלהם.",
+					"url": "projectsExamples/landingPages/landingPage6/displayPage.html",
+					"image": "images/projectsDisplayImages/landingPages/landingPage6.jpg",
+					"tech": ["html5", "css3"]
+				},
+				{
+					"title": "לחשוב מחוץ לקופסא",
+					"description": "זוהי דוגמה לעמוד נחיתה שמשלב מספר אלמנטים כמו הטמעת מפה לטובת מיקום עסק, לינקים לרשתות חברתיות, יצירת קשר.",
+					"url": "projectsExamples/landingPages/landingPage7/displayPage.html",
+					"image": "images/projectsDisplayImages/landingPages/landingPage7.jpg",
+					"tech": ["html5", "css3"]
+				}
+			]
+		},
+		{
+			"games": [
+				{
+					"title": "Meomory Game",
+					"description": "משחק הזיכרון המוכר בגרסה מעוצבת ומעודכנת. מצאו את הזוגות המתאימים ובדקו את כישורי הזיכרון שלכם.",
+					"url": "projectsExamples/games/memoryGame/index.html",
+					"image": "images/projectsDisplayImages/games/memoryGame.jpg",
+					"tech": ["html5", "css3", "javaScript"]
+				},
+				{
+					"title": "Trivia Game",
+					"description": "שחקו במבחן הטירוויה האולטימטיבי, בחנו את הידע הכללי שלכם והשוו את התוצאות עם חבריכם.",
+					"url": "projectsExamples/games/triviaGame/index.html",
+					"image": "images/projectsDisplayImages/games/triviaGame.jpg",
+					"tech": ["html5", "css3", "javaScript"]
+				},
+				{
+					"title": "Game 3",
+					"description": "This is the third game",
+					"url": "https://www.google.com",
+					"image": "https://www.google.com",
+					"tech": ["html5", "css3", "javaScript"]
+				}
+			]
+		},
+		{
+			"websites": [
+				{
+					"title": "Pokedex",
+					"description": "פוקדקס הוא מאגר מידע המציג את כל הפוקימונים הקיימים עם תמונות ומידע נוסף על כל פוקימון. ניתן לשמור את הפוקימונים האהובים עליכם ולצפות בהם בכל עת.",
+					"url": "projectsExamples/websites/Pokedex/index.html",
+					"image": "images/projectsDisplayImages/websites/pokedex.jpg",
+					"tech": ["html5", "css3", "javaScript"]
+				},
+				{
+					"title": "World Countries",
+					"description": "אתר מידע הכולל את מדינות העולם, דגלים שלהם, ומידע כללי. בנוסף ניתן לצפות במזג האוויר בבירה של כל מדינה בלחיצת כפתור",
+					"url": "projectsExamples/websites/Countries/index.html",
+					"image": "images/projectsDisplayImages/websites/countries.jpg",
+					"tech": ["html5", "css3", "javaScript"]
+				},
+				{
+					"title": "Website 3",
+					"description": "This is the third website",
+					"url": "https://www.google.com",
+					"image": "https://www.google.com",
+					"tech": ["html5", "css3", "javaScript"]
+				}
+			]
+		}
+	]
 }

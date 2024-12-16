@@ -1,4 +1,5 @@
 //the main containers for the projects
+const mainPage = document.querySelector(".mainPage");
 const projectsDisplay = document.querySelector(".projectsDisplay");
 let projectsCategorey;
 const projectDivCleaner = document.querySelector(".projectDivCleaner");
@@ -22,10 +23,9 @@ const contactForm = document.getElementById("contactForm");
 
 async function fetchProjectsData() {
 	try {
-		const response = await fetch("/project/script/projects.json"); //fetch that works with github pages
-		//const response = await fetch("../script/projects.json"); //fetch that works with local server
+		//const response = await fetch("/project/script/projects.json"); //fetch that works with github pages
+		const response = await fetch("../script/projects.json"); //fetch that works with local server
 		projectsData = await response.json();
-		console.log(projectsData);
 	} catch (error) {
 		console.error("Error:", error);
 	}
@@ -48,8 +48,10 @@ class ProjectCard {
                         <div class="techUsed">
                             ${this.projectTechDisplay(project)}
                     </div>
-                    <div class="projbutton normalText"><a href="${project.url}">למעבר לפרויקט</a></div>
+                    <div class="projbutton normalText">למעבר לפרויקט</div>
         `;
+		const projectButton = projectCard.querySelector(".projbutton");
+		projectButton.addEventListener("click", (e) => openDisplayPage(e));
 		return projectCard;
 	}
 	projectTechDisplay(project) {
@@ -83,7 +85,6 @@ function showProjectsDisplay(categoreyIndication, categoryName) {
 	projectsDisplay.style.display = "flex";
 	projectDivCleaner.innerHTML = "";
 	const projectsArray = projectsData.projects[categoreyIndication][categoryName];
-	console.log(projectsArray);
 	projectsCategorey = document.createElement("div");
 	projectsCategorey.classList.add("listofprojects");
 	projectDivCleaner.appendChild(projectsCategorey);
@@ -167,4 +168,35 @@ function messageSuccess() {
 	setTimeout(() => {
 		popUpMessage.remove();
 	}, 1500);
+}
+
+/* ------------------------------------------------------- Display Page Functions ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------- */
+const displayPage = document.querySelector(".displayPage");
+const displayPageTitle = document.querySelector(".displayPageTitle");
+const displayPageDescription = document.querySelector(".displayPageDescription");
+const showProject = document.querySelector(".showProject");
+const downloadProject = document.querySelector(".downloadProject");
+const displayPageTech = document.querySelector(".displayPageTech");
+const displayPageImage = document.querySelector(".displayPageImage");
+
+function openDisplayPage(e) {
+	const projectTitle = e.target.parentElement.querySelector("h3").innerText;
+	let allProjects = projectsData.projects.flatMap((obj) => Object.values(obj)).flat();
+	const project = allProjects.find((project) => project.title === projectTitle);
+	mainPage.style.display = "none";
+	displayPage.style.display = "block";
+
+	displayPageTitle.innerText = project.title;
+	displayPageDescription.innerText = project.description;
+	displayPageImage.src = project.image;
+	displayPageTech.innerHTML = project.tech.map((tech) => `<img src="images/svg/${tech}.svg" alt="${tech} logo">`).join("");
+	showProject.href = project.url;
+	downloadProject.href = project.downloadLink;
+
+	const backToMainButton = document.querySelector(".backToMainButton");
+	backToMainButton.addEventListener("click", () => {
+		displayPage.style.display = "none";
+		mainPage.style.display = "block";
+	});
 }

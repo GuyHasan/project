@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Mada:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Birthstone&display=swap");
+
+/* ----------------------------------------------------------------------- General Stuff ------------------------------------------------------------------------------ */
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.background {
+	background: linear-gradient(to bottom, #4facfe, #00f2fe);
+}
+
+.wrap {
+	min-height: 100vh;
+	max-height: fit-content;
+	font-family: Mada;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 20px 0px;
+}
+
+.title {
+	font-size: 3.5rem;
+	font-family: Birthstone;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+.search {
+	border: 1px solid black;
+	border-radius: 8px;
+	background-color: #f1f1f1;
+	margin-bottom: 30px;
+	width: 30vw;
+	padding: 7px;
+	font-size: 1.2rem;
+	font-family: Mada;
+}
+
+.countries {
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+.weather {
+	display: none;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	padding: 0 10vw;
+}
+
+/* ------------------------------------------------------------------------- card Design ------------------------------------------------------------------------------ */
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.card {
+	background-color: #fff;
+	height: 45vh;
+	width: 15vw;
+	gap: 10px;
+	box-shadow: 0 0px 1px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	overflow: hidden;
+}
+
+.card img {
+	width: 100%;
+	height: auto;
+}
+
+.weatherButton {
+	background-color: #58b8db;
+	border: none;
+	box-shadow: 0 0px 1px 1px rgba(0, 0, 0, 0.2);
+	padding: 10px;
+	border-radius: 8px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	transition: all 1s ease-in-out;
+}
+
+.weatherButton:hover {
+	transform: scale(1.1);
+	box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------------------------------------------------------------ Weather Card ------------------------------------------------------------------------------ */
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.weatherCard {
+	background-color: #58b8db;
+	color: white;
+	height: 45vh;
+	width: 40vw;
+	gap: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0px 1px 1px rgba(0, 0, 0, 0.2);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.weatherCard img {
+	height: 20%;
+	width: auto;
+}
+
+.weatherCard h2 {
+	font-size: clamp(1.5rem, 1.19vw + 1.071rem, 2.5rem);
+}
+.weatherCard p {
+	font-size: clamp(1rem, 0.298vw + 0.893rem, 1.25rem);
+}
+
+.closeWeather {
+	background-color: #fff;
+	color: rgb(28, 154, 233);
+	font-size: clamp(1.5rem, 1.488vw + 0.964rem, 2.75rem);
+	font-family: Birthstone;
+	font-weight: bold;
+	border: none;
+	box-shadow: 0 0px 1px 1px rgba(255, 255, 255, 0.2);
+	padding: 8px 25px;
+	border-radius: 8px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	transition: all 1s ease-in-out;
+}
+
+.closeWeather:hover {
+	transform: scale(1.05);
+	box-shadow: inset 0 0 10px 5px rgba(255, 255, 255, 0.2);
+}
+
+/* ------------------------------------------------------------------------- media Query ------------------------------------------------------------------------------ */
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 991px) {
+	.card {
+		width: 30vw;
+		height: 50vh;
+	}
+}
+
+@media screen and (max-width: 567px) {
+	.card {
+		width: 50vw;
+		min-height: fit-content;
+	}
+	.weatherButton {
+		margin: 15px;
+	}
+	.search {
+		width: 70vw;
+	}
+	.weatherCard {
+		width: 70vw;
+		padding: 30px;
+		height: fit-content;
+	}
+}
