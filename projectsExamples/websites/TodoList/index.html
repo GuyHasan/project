@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>רשימת משימות</title>
+		<link rel="stylesheet" href="style/style.css" />
+		<script src="script/script.js" defer></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="lngContainer">
+				<button class="hebrewButton">עברית</button>
+				<button class="englishButton">English</button>
+			</div>
+			<h1 class="headTitle"></h1>
+			<p class="instrections"></p>
+			<button class="logTodos"></button>
+			<div class="todosFormPage">
+				<h3 class="formTitle"></h3>
+				<form class="todoForm hebrew">
+					<label for="title" class="formTitleLabel"></label>
+					<div class="inputWrap">
+						<input type="text" id="title" class="formTitleInput" name="title" placeholder="כותרת" />
+					</div>
+					<label for="description" class="formDescriptionLabel"></label>
+					<div class="inputWrap">
+						<textarea type="text" id="description" class="formDescriptionInput" name="Description" placeholder="תיאור"> </textarea>
+					</div>
+					<label for="date" class="formDueDateLabel"></label>
+					<div class="inputWrap">
+						<input type="date" class="formDueDateInput" name="dueDate" id="date" />
+					</div>
+					<button type="submit" class="addTodoSubmit"></button>
+					<button type="submit" class="editTodoSubmit"></button>
+				</form>
+			</div>
+			<button class="showTodos"></button>
+			<div class="todosList">
+				<div class="mobileNavigator">
+					<button class="notStartedButtonMobile"></button>
+					<button class="inProgressButtonMobile"></button>
+					<button class="doneButtonMobile"></button>
+				</div>
+				<div class="todosWrap">
+					<div class="todosContainer notStartedContainer">
+						<h2 class="notStartedTitle"></h2>
+						<div class="notStarted"></div>
+					</div>
+					<div class="todosContainer inProgressContainer">
+						<h2 class="inProgressTitle"></h2>
+						<div class="inProgress"></div>
+					</div>
+					<div class="todosContainer doneContainer">
+						<h2 class="doneTitle"></h2>
+						<div class="done"></div>
+					</div>
+				</div>
+			</div>
+			<button class="homeButton"></button>
+		</div>
+	</body>
+</html>
