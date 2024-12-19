@@ -97,7 +97,7 @@
 				{
 					"title": "מנהל משימות",
 					"description": "אתר המאפשר למשתמש ליצור משימות ולנהל אותן בצורה נוחה וקלה. ניתן להוסיף, למחוק ולערוך משימות ולסמן אותן כבוצעות.",
-					"url": "projectExamples/websites/TodoList/index.html",
+					"url": "projectsExamples/websites/TodoList/index.html",
 					"image": "images/projectsDisplayImages/websites/todoList.jpg",
 					"tech": ["html5", "css3", "javaScript"]
 				}
