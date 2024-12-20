@@ -32,6 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
 		winCountPlayer1 = parseInt(sessionStorage.getItem("player1"));
 		winCountPlayer2 = parseInt(sessionStorage.getItem("player2"));
 		updateWinCount();
+	} else {
+		sessionStorage.setItem("player1", 0);
+		sessionStorage.setItem("player2", 0);
+		updateWinCount();
 	}
 });
 
@@ -56,7 +60,7 @@ function startGame() {
 
 function handleCellClick(e) {
 	const cell = e.target;
-	if (cell.textContent === "") {
+	if (cell.innerHTML === "") {
 		cell.innerHTML = currentPlayer === player1 ? svgX : svgO;
 		cell.classList.add(currentPlayer === "X" ? "X" : "O");
 		turnSystem();
@@ -85,7 +89,7 @@ function resetGame() {
 		cell.classList.remove("X");
 		cell.classList.remove("O");
 	});
-	currentPlayer = player1;
+	currentPlayer = Math.random() < 0.5 ? player1 : player2;
 	turnDisplay.textContent = `${currentPlayer} מתחיל`;
 }
 
