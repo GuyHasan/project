@@ -70,10 +70,10 @@
 					"tech": ["html5", "css3", "javaScript"]
 				},
 				{
-					"title": "Game 3",
-					"description": "This is the third game",
-					"url": "",
-					"image": "",
+					"title": "איקס עיגול",
+					"description": "משחק איקס עיגול המוכר בגרסה מעוצבת ומעודכנת. שחקו נגד חברכם בצורה מקומית ונסו לנצח כמה שיותר.",
+					"url": "projectsExamples/games/ticTacToe/index.html",
+					"image": "images/projectsDisplayImages/games/ticTacToe.jpg",
 					"tech": ["html5", "css3", "javaScript"]
 				}
 			]
