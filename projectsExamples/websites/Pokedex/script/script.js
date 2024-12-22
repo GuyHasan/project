@@ -10,6 +10,8 @@ const pokemonStats = document.querySelector(".pokemonStats");
 
 //all the pokemon data display in the myPokemons needed variables
 let pokemonInfo;
+let parentElement;
+let favoritePokemonsData = [] || JSON.parse(sessionStorage.getItem("favoritePokemonsData"));
 const pokemonNicknameInput = document.querySelector(".pokemonNameInput");
 const pokemonLevelInput = document.querySelector(".pokemonLevelInput");
 const pokemonNatureInput = document.querySelector(".pokemonNatureInput");
@@ -70,14 +72,20 @@ homeButtons.forEach((button) =>
 	})
 );
 addPokemon.addEventListener("click", () => markFavorite(pokemonInputs));
+updatePokemonButton.addEventListener("click", () => updatePokemon(parentElement));
 
 /* --------------------------------------------------------- Login Functions -------------------------------------------------------------------------*/
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 function login() {
-	loginPopUp.style.display = "flex";
-	const loginButton = document.querySelector(".loginButton");
-	loginButton.addEventListener("click", trainerDataHandler);
+	if (sessionStorage.getItem("trainerInfo") === null) {
+		loginPopUp.style.display = "flex";
+		const loginButton = document.querySelector(".loginButton");
+		loginButton.addEventListener("click", trainerDataHandler);
+	} else {
+		let trainerInfo = JSON.parse(sessionStorage.getItem("trainerInfo"));
+		displayTrainerInfo(trainerInfo);
+	}
 }
 
 function trainerDataHandler() {
@@ -127,6 +135,9 @@ function clearErrors() {
 }
 
 function displayTrainerInfo(trainerInfo) {
+	if (sessionStorage.getItem("trainerInfo") === null) {
+		sessionStorage.setItem("trainerInfo", JSON.stringify(trainerInfo));
+	}
 	trainerName.innerHTML = capitalizeFirstLetter(trainerInfo[0]);
 	trainerAge.innerHTML = `Age: ${trainerInfo[1]}`;
 	genderSet(trainerInfo[2]);
@@ -298,6 +309,16 @@ function showMyPokemons() {
 	myPokemonsDisplay.style.display = "flex";
 	pokemonDataView.style.display = "none";
 	pokedexHome.style.display = "none";
+	if (sessionStorage.getItem("favoritePokemonsData") !== null) {
+		favoritePokemonsData = JSON.parse(sessionStorage.getItem("favoritePokemonsData"));
+		displayFavoritePokemons();
+	}
+}
+
+function displayFavoritePokemons() {
+	favoritePokemonsData.forEach((pokemon, index) => {
+		pokemonCardMaker(pokemon, index);
+	});
 }
 
 function enterYourPokemon() {
@@ -316,14 +337,30 @@ function markFavorite(pokemonInputs) {
 		showErrors(pokemonInputs[1], "Max Level 99");
 	}
 	if (isValidPokemon) {
-		let pokemonNickname = pokemonInputs[0].value || pokemonName.textContent;
-		let pokemonLevel = pokemonInputs[1].value || 5;
-		let pokemonNature = pokemonInputs[2].value;
-		pokemonInfo = [pokemonNickname, pokemonLevel, pokemonNature];
-		let favorite = document.createElement("div");
-		favorite.classList.add("favorite");
-		favorite.innerHTML = `
-        <img src="${pokemonImg.src}" alt="${pokemonName.textContent} class="favoriteImg">
+		let pokemonInputsValues = [pokemonInputs[0].value || pokemonName.textContent, pokemonInputs[1].value || 5, pokemonInputs[2].value, pokemonImg.src, pokemonName.textContent];
+		favoritePokemonsData.push(pokemonInputsValues);
+		let index = favoritePokemonsData.length - 1;
+		pokemonCardMaker(pokemonInputsValues, index);
+		clearFields();
+		sessionStorage.setItem("favoritePokemonsData", JSON.stringify(favoritePokemonsData));
+		yourPokePopUp.style.display = "none";
+		pokemonDataView.style.display = "none";
+		myPokemonsDisplay.style.display = "flex";
+	}
+}
+
+function pokemonCardMaker(pokemonInputsValues, index) {
+	let pokemonNickname = pokemonInputsValues[0];
+	let pokemonLevel = pokemonInputsValues[1];
+	let pokemonNature = pokemonInputsValues[2];
+	let pokemonImg = pokemonInputsValues[3];
+	let pokemonName = pokemonInputsValues[4];
+	pokemonInfo = [pokemonNickname, pokemonLevel, pokemonNature, pokemonImg, pokemonName];
+	let favorite = document.createElement("div");
+	favorite.classList.add("favorite");
+	favorite.id = index;
+	favorite.innerHTML = `
+		<img src="${pokemonInfo[3]}" alt="${pokemonInfo[4]}" class="favoriteImg">
         <div class="favoriteName">${pokemonInfo[0]}</div>
         <div class="row">
             <div class="favoriteLevel">Level: ${pokemonInfo[1]}</div>
@@ -332,37 +369,42 @@ function markFavorite(pokemonInputs) {
         <button class="editPokemonButton"><img src="images/editPen.svg" alt="edit" title="Edit"/></button>
         <button class="deletePokemonButton"><img src="images/deleteThrash.svg" alt="delete" title="Delete"/></button>
         `;
-		clearFields();
-		myPokemonsDisplay.appendChild(favorite);
-		const editPokemonButton = favorite.querySelector(".editPokemonButton");
-		editPokemonButton.addEventListener("click", (e) => editPokemon(e));
-		const deletePokemonButton = favorite.querySelector(".deletePokemonButton");
-		deletePokemonButton.addEventListener("click", () => deletePokemon(favorite));
-
-		yourPokePopUp.style.display = "none";
-		pokemonDataView.style.display = "none";
-		myPokemonsDisplay.style.display = "flex";
-	}
+	myPokemonsDisplay.appendChild(favorite);
+	const editPokemonButton = favorite.querySelector(".editPokemonButton");
+	editPokemonButton.addEventListener("click", (e) => editPokemon(e));
+	const deletePokemonButton = favorite.querySelector(".deletePokemonButton");
+	deletePokemonButton.addEventListener("click", () => deletePokemon(favorite));
 }
 
 function editPokemon(e) {
-	let parentElement = e.target.closest(".favorite");
+	parentElement = e.target.closest(".favorite");
 	yourPokePopUp.style.display = "flex";
 	pokemonNicknameInput.value = parentElement.querySelector(".favoriteName").textContent;
 	pokemonLevelInput.value = parentElement.querySelector(".favoriteLevel").textContent.replace("Level: ", "");
 	pokemonNatureInput.value = parentElement.querySelector(".favoriteNature").textContent.replace("Nature: ", "");
 	updatePokemonButton.style.display = "block";
 	addPokemon.style.display = "none";
-	updatePokemonButton.addEventListener("click", () => updatePokemon(parentElement));
 }
 
 function deletePokemon(parentElement) {
+	console.log(parentElement.id);
+	favoritePokemonsData.splice(parentElement.id, 1);
+	sessionStorage.setItem("favoritePokemonsData", JSON.stringify(favoritePokemonsData));
 	parentElement.remove();
+	// Update remaining elements' IDs
+	const remainingCards = document.querySelectorAll(".favorite");
+	remainingCards.forEach((card, index) => {
+		card.id = index;
+	});
 }
 
 function updatePokemon(parentElement) {
 	let isValidPokemon = true;
 	clearErrors();
+	if (pokemonInputs[0].value == "") {
+		isValidPokemon = false;
+		showErrors(pokemonInputs[0], "Name Is Required");
+	}
 	if (pokemonInputs[0].value.length > 10) {
 		isValidPokemon = false;
 		showErrors(pokemonInputs[0], "Up to 10 Characters");
@@ -372,11 +414,30 @@ function updatePokemon(parentElement) {
 		showErrors(pokemonInputs[1], "Max Level 99");
 	}
 	if (isValidPokemon) {
-		parentElement.querySelector(".favoriteName").textContent = pokemonNicknameInput.value;
-		parentElement.querySelector(".favoriteLevel").textContent = `Level: ${pokemonLevelInput.value}`;
-		parentElement.querySelector(".favoriteNature").textContent = `Nature: ${pokemonNatureInput.value}`;
-		yourPokePopUp.style.display = "none";
+		// Get current input values
+		const newNickname = pokemonNicknameInput.value;
+		const newLevel = pokemonLevelInput.value;
+		const newNature = pokemonNatureInput.value;
+
+		// Update DOM
+		parentElement.querySelector(".favoriteName").textContent = `${newNickname}`;
+		parentElement.querySelector(".favoriteLevel").textContent = `Level: ${newLevel}`;
+		parentElement.querySelector(".favoriteNature").textContent = `Nature: ${newNature}`;
+
+		// Find and update array
+		const pokemonIndex = favoritePokemonsData.findIndex((_, index) => index == parentElement.id);
+		if (pokemonIndex !== -1) {
+			const existingImgSrc = parentElement.querySelector(".favoriteImg").src;
+			const existingPokemon = favoritePokemonsData[pokemonIndex];
+			const existingPokemonName = existingPokemon[4];
+			favoritePokemonsData[pokemonIndex] = [newNickname, newLevel, newNature, existingImgSrc, existingPokemonName];
+			console.log(favoritePokemonsData);
+
+			// Update storage
+			sessionStorage.setItem("favoritePokemonsData", JSON.stringify(favoritePokemonsData));
+		}
 		clearFields();
+		yourPokePopUp.style.display = "none";
 	}
 }
 
