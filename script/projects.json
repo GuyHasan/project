@@ -7,6 +7,7 @@
 					"description": "זוהי דוגמה לעמוד נחיתה בעל רקע מחולק וטופס במרכזו ליצור משיכת עין.",
 					"url": "projectsExamples/landingPages/landingPage1/index.html",
 					"image": "images/projectsDisplayImages/landingPages/landingPage1.jpg",
+					"download": "projectsExamples/landingPages/landingPage1.zip",
 					"tech": ["html5", "css3"]
 				},
 				{
@@ -14,6 +15,7 @@
 					"description": "זוהי דוגמה לעמוד נחיתה בסגנון הזמנה, שכל העמוד מתפקד כטופס שליחת פרטים גדול.",
 					"url": "projectsExamples/landingPages/landingPage2/index.html",
 					"image": "images/projectsDisplayImages/landingPages/landingPage2.jpg",
+					"download": "projectsExamples/landingPages/landingPage2.zip",
 					"tech": ["html5", "css3"]
 				},
 				{
@@ -21,6 +23,7 @@
 					"description": "זוהי דוגמה לעמוד נחיתה שנותן דגש למוצר העסק לדוגמה קפה הדגל של בית הקפה.",
 					"url": "projectsExamples/landingPages/landingPage3/index.html",
 					"image": "images/projectsDisplayImages/landingPages/landingPage3.jpg",
+					"download": "projectsExamples/landingPages/landingPage3.zip",
 					"tech": ["html5", "css3"]
 				},
 				{
@@ -28,6 +31,7 @@
 					"description": "זוהי דוגמה לעמוד נחיתה בצורת חץ המצביע לטופס השארת פרטים.",
 					"url": "projectsExamples/landingPages/landingPage4/index.html",
 					"image": "images/projectsDisplayImages/landingPages/landingPage4.jpg",
+					"download": "projectsExamples/landingPages/landingPage4.zip",
 					"tech": ["html5", "css3"]
 				},
 				{
@@ -35,6 +39,7 @@
 					"description": "זוהי דוגמה לעמוד נחיתה שבנוי בצורת גלרייה שמורכבת מתמונות, מידע ומקום ליצירת קשר.",
 					"url": "projectsExamples/landingPages/landingPage5/index.html",
 					"image": "images/projectsDisplayImages/landingPages/landingPage5.jpg",
+					"download": "projectsExamples/landingPages/landingPage5.zip",
 					"tech": ["html5", "css3"]
 				},
 				{
@@ -42,6 +47,7 @@
 					"description": "זוהי דוגמה לעמוד נחיתה עם דגש על השארת פרטים ויצירת קשר גם דרך רשתות חברתיות בנוסף באמצעות סמלילים שלהם.",
 					"url": "projectsExamples/landingPages/landingPage6/index.html",
 					"image": "images/projectsDisplayImages/landingPages/landingPage6.jpg",
+					"download": "projectsExamples/landingPages/landingPage6.zip",
 					"tech": ["html5", "css3"]
 				},
 				{
@@ -49,6 +55,7 @@
 					"description": "זוהי דוגמה לעמוד נחיתה שמשלב מספר אלמנטים כמו הטמעת מפה לטובת מיקום עסק, לינקים לרשתות חברתיות, יצירת קשר.",
 					"url": "projectsExamples/landingPages/landingPage7/index.html",
 					"image": "images/projectsDisplayImages/landingPages/landingPage7.jpg",
+					"download": "projectsExamples/landingPages/landingPage7.zip",
 					"tech": ["html5", "css3"]
 				}
 			]
@@ -60,6 +67,7 @@
 					"description": "משחק הזיכרון המוכר בגרסה מעוצבת ומעודכנת. מצאו את הזוגות המתאימים ובדקו את כישורי הזיכרון שלכם.",
 					"url": "projectsExamples/games/memoryGame/index.html",
 					"image": "images/projectsDisplayImages/games/memoryGame.jpg",
+					"download": "projectsExamples/games/memoryGame/memoryGame.zip",
 					"tech": ["html5", "css3", "javaScript"]
 				},
 				{
@@ -67,6 +75,7 @@
 					"description": "שחקו במבחן הטירוויה האולטימטיבי, בחנו את הידע הכללי שלכם והשוו את התוצאות עם חבריכם.",
 					"url": "projectsExamples/games/triviaGame/index.html",
 					"image": "images/projectsDisplayImages/games/triviaGame.jpg",
+					"download": "projectsExamples/games/triviaGame/triviaGame.zip",
 					"tech": ["html5", "css3", "javaScript"]
 				},
 				{
@@ -74,6 +83,7 @@
 					"description": "משחק איקס עיגול המוכר בגרסה מעוצבת ומעודכנת. שחקו נגד חברכם בצורה מקומית ונסו לנצח כמה שיותר.",
 					"url": "projectsExamples/games/ticTacToe/index.html",
 					"image": "images/projectsDisplayImages/games/ticTacToe.jpg",
+					"download": "projectsExamples/games/ticTacToe/ticTacToe.zip",
 					"tech": ["html5", "css3", "javaScript"]
 				}
 			]
@@ -85,6 +95,7 @@
 					"description": "פוקדקס הוא מאגר מידע המציג את כל הפוקימונים הקיימים עם תמונות ומידע נוסף על כל פוקימון. ניתן לשמור את הפוקימונים האהובים עליכם ולצפות בהם בכל עת.",
 					"url": "projectsExamples/websites/Pokedex/index.html",
 					"image": "images/projectsDisplayImages/websites/pokedex.jpg",
+					"download": "projectsExamples/websites/Pokedex/Pokedex.zip",
 					"tech": ["html5", "css3", "javaScript"]
 				},
 				{
@@ -92,6 +103,7 @@
 					"description": "אתר מידע הכולל את מדינות העולם, דגלים שלהם, ומידע כללי. בנוסף ניתן לצפות במזג האוויר בבירה של כל מדינה בלחיצת כפתור",
 					"url": "projectsExamples/websites/Countries/index.html",
 					"image": "images/projectsDisplayImages/websites/countries.jpg",
+					"download": "projectsExamples/websites/Countries/Countries.zip",
 					"tech": ["html5", "css3", "javaScript"]
 				},
 				{
@@ -99,6 +111,7 @@
 					"description": "אתר המאפשר למשתמש ליצור משימות ולנהל אותן בצורה נוחה וקלה. ניתן להוסיף, למחוק ולערוך משימות ולסמן אותן כבוצעות.",
 					"url": "projectsExamples/websites/TodoList/index.html",
 					"image": "images/projectsDisplayImages/websites/todoList.jpg",
+					"download": "projectsExamples/websites/TodoList/TodoList.zip",
 					"tech": ["html5", "css3", "javaScript"]
 				}
 			]

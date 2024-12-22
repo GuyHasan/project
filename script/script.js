@@ -192,7 +192,8 @@ function openDisplayPage(e) {
 	displayPageImage.src = project.image;
 	displayPageTech.innerHTML = project.tech.map((tech) => `<img src="images/svg/${tech}.svg" alt="${tech} logo">`).join("");
 	showProject.href = project.url;
-	downloadProject.href = project.downloadLink;
+	downloadProject.href = project.download;
+	downloadProject.download = project.download;
 
 	const backToMainButton = document.querySelector(".backToMainButton");
 	backToMainButton.addEventListener("click", () => {
